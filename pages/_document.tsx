@@ -9,8 +9,9 @@ export default class CustomDocument extends Document {
     return <Html>
       <Head>
         <meta property="custom" content="flamy" />
+        <link href="/fonts/style.css" rel="stylesheet" />
       </Head>
-      <body>
+      <body className="dark">
         <Main /> 
       </body>
       <NextScript />

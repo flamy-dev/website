@@ -1,10 +1,27 @@
-//responsible for rendering all of the pages.
-//Execution on both side server and client.
+import '../styles/globals.css';
+import { useState, useEffect } from "react";
 
-import '../styles/globals.css'
+const MyApp = ({ Component, pageProps }) => {
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  const [isLoaderVisible, setIsLoaderVisible] = useState(true);
+
+  useEffect(() => {
+    window.onload = () => setIsLoaderVisible(false);
+  }, []);
+
+  return (
+    <>
+      {isLoaderVisible ? (
+        <div
+          className="flex fixed h-screen w-screen justify-center items-center z-100 bg-gray-500"
+        >
+          Loading...
+        </div>
+      ): null
+      }
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
