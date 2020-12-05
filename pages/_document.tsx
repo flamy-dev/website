@@ -11,8 +11,8 @@ export default class CustomDocument extends Document {
         <meta property="custom" content="flamy" />
         <link href="/fonts/style.css" rel="stylesheet" />
       </Head>
-      <body className="dark">
-        <Main /> 
+      <body className="dark dark:bg-darktheme">
+        <Main/> 
       </body>
       <NextScript />
     </Html>

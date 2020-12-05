@@ -5,7 +5,12 @@ module.exports = {
     extend: {
       fontFamily: {
         'helvetica': ['Helvetica', 'sans-serif']
-      }
+      },
+      backgroundImage: theme => ({
+        'underline': "url('/underline.svg')",
+        'whitetheme': "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/White_bg.jpg')",
+        'darktheme': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg.svg')"
+      })
     },
   },
   variants: {

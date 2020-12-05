@@ -1,10 +1,14 @@
 import Head from 'next/head'
+import FullPageDiv from '../components/FullPageDiv/FullPageDiv'
 import styles from '../styles/Home.module.css'
+import Page from '../components/Page/Page';
 
 export default function Home() {
   return (
-    <h1 className="text-3xl font-extrabold flex justify-center font-helvetica">
-      Flamy
-    </h1>
+    <Page title="Flamy - About">
+      <FullPageDiv >
+        I'm a full page div
+      </FullPageDiv>
+    </Page>
   )
 }
