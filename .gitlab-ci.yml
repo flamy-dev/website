@@ -3,8 +3,18 @@ image: node
 cache:
   paths:
     - node_modules
+    - .next/cache
 
 prettier:
   script:
     - yarn
     - yarn check-prettier
+
+pages:
+  stage: deploy
+  script:
+    - yarn build
+    - mv out public
+  artifacts:
+    paths:
+      - public
