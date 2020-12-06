@@ -1,0 +1,10 @@
+image: node
+
+cache:
+  paths:
+    - node_modules
+
+prettier:
+  script:
+    - yarn
+    - yarn check-prettier
