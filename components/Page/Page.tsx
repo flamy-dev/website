@@ -6,7 +6,7 @@ const Page = (props) => {
   const { title, children } = props;
 
   return (
-    <div className="bg-darktheme h-full w-full bg-no-repeat bg-cover bg-center">
+    <div className="h-full w-full bg-darktheme bg-no-repeat bg-cover bg-center">
       <Head>
         <title>{title}</title>
         <link rel="icon" type="image/x-icon" href="/logo-square.svg" />

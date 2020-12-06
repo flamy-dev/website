@@ -3,7 +3,7 @@ const FullPageDiv = (props) => {
   const { children } = props;
   
   return (
-    <div className="h-screen w-screen flex justify-center items-center flex-col lg:flex-row flex-wrap p-20 dark:text-white">
+    <div className=" min-h-screen w-screen flex justify-center items-center flex-col flex-wrap p-10 md:p-20 dark:text-white">
       {children}
     </div>
   )

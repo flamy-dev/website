@@ -20,4 +20,9 @@ a {
   box-sizing: border-box;
 }
 
+/* background color fix */
+.carousel .slide {
+  background: none !important;
+}
+
 @tailwind utilities;
