@@ -23,6 +23,7 @@ const Navbar = (props) => {
         {navLinks.map((navLink) => {
           return (
             <Link href={navLink.to} key={navLink.to}>
+              {/* @ts-ignore */}
               <StyledNavLink
                 active={
                   router.pathname === `/${navLink.to}` ||
