@@ -1,16 +1,17 @@
 const Headings = (props) => {
-  
   const { children } = props;
-  
+
   return (
-    <h2 className={`
+    <h2
+      className={`
       flex justify-center items-center 
-      font-helvetica font-extrabold text-5xl tracking-wide
-      md:text-6xl
-      `}>
+      font-helvetica font-extrabold text-4xl tracking-wide
+      md:text-6xl text-center
+      `}
+    >
       {children}
     </h2>
-  )
-}
+  );
+};
 
 export default Headings;
