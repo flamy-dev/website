@@ -14,8 +14,9 @@ const MyApp = ({ Component, pageProps }) => {
         <div className="flex fixed h-screen w-screen justify-center items-center z-100 bg-gray-500">
           Loading...
         </div>
-      ) : null}
-      <Component {...pageProps} />
+      ) : (
+        <Component {...pageProps} />
+      )}
     </>
   );
 };
