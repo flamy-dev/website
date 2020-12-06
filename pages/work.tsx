@@ -7,11 +7,9 @@ const Work = () => {
   console.log(router);
   return (
     <Page title="Flamy - Work">
-      <FullPageDiv >
-        Work Page
-      </FullPageDiv>
+      <FullPageDiv>Work Page</FullPageDiv>
     </Page>
-  ) 
-}
+  );
+};
 
 export default Work;

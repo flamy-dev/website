@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "check-prettier": "prettier --check .",
+    "prettify": "prettier --write ."
   },
   "dependencies": {
     "@types/node": "^14.14.10",
@@ -18,5 +20,8 @@
     "react-responsive-carousel": "^3.2.11",
     "tailwindcss": "^2.0.1",
     "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
   }
 }

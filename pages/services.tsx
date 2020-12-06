@@ -9,7 +9,7 @@ const Services = () => {
         <PageCarousel />
       </FullPageDiv>
     </Page>
-  )
-}
+  );
+};
 
 export default Services;

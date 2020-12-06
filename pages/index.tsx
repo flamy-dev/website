@@ -1,9 +1,7 @@
-import About from "./about"
+import About from "./about";
 
 const Home = () => {
-  return (
-    <About />
-  )
-}
+  return <About />;
+};
 
 export default Home;

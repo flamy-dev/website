@@ -1,8 +1,7 @@
-import '../styles/globals.css';
+import "../styles/globals.css";
 import { useState, useEffect } from "react";
 
 const MyApp = ({ Component, pageProps }) => {
-
   const [isLoaderVisible, setIsLoaderVisible] = useState(true);
 
   useEffect(() => {
@@ -12,16 +11,13 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       {isLoaderVisible ? (
-        <div
-          className="flex fixed h-screen w-screen justify-center items-center z-100 bg-gray-500"
-        >
+        <div className="flex fixed h-screen w-screen justify-center items-center z-100 bg-gray-500">
           Loading...
         </div>
-      ): null
-      }
+      ) : null}
       <Component {...pageProps} />
     </>
-  )
-}
+  );
+};
 
-export default MyApp
+export default MyApp;

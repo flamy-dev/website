@@ -11,15 +11,13 @@ const Page = (props) => {
         <title>{title}</title>
         <link rel="icon" type="image/x-icon" href="/logo-square.svg" />
       </Head>
-      <NavBar >
-        <ContactButton>
-          Contact Us
-        </ContactButton>
+      <NavBar>
+        <ContactButton>Contact Us</ContactButton>
       </NavBar>
-      
+
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default Page;
