@@ -6,11 +6,11 @@ const Navbar = (props) => {
 
   const { children } = props;
   const router = useRouter();
-  console.log(router);
+  // console.log(router);
   const navLinks = [
-    { text: "About", to: "about" },
-    { text: "Work", to: "work" },
-    { text: "Services", to: "services" },
+    { text: "About", to: "/about" },
+    { text: "Work", to: "/work" },
+    { text: "Services", to: "/services" },
   ];
 
   return (
