@@ -26,8 +26,8 @@ const Navbar = (props) => {
               {/* @ts-ignore */}
               <StyledNavLink
                 active={
-                  router.pathname === `/${navLink.to}` ||
-                  (router.pathname === "/" && navLink.to === "about")
+                  router.pathname === `${navLink.to}` ||
+                  (router.pathname === "/" && navLink.to === "/about")
                 }
               >
                 {navLink.text}

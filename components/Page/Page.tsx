@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Head from "next/head";
 import ContactButton from "../ContactButton/ContactButton";
 import NavBar from "../Navbar/Navbar";
@@ -12,7 +13,11 @@ const Page = (props) => {
         <link rel="icon" type="image/x-icon" href="/logo-square.svg" />
       </Head>
       <NavBar>
-        <ContactButton>Contact Us</ContactButton>
+        <ContactButton>
+          <Link href="contactus">
+            <a>Contact Us</a>
+          </Link>
+        </ContactButton>
       </NavBar>
 
       {children}
