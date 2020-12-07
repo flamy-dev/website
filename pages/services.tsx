@@ -5,9 +5,14 @@ import PageCarousel from "../components/PageCarousel/PageCarousel";
 const Services = () => {
   return (
     <Page title="Flamy - Services">
-      <FullPageDiv>
+      <div className="w-full h-full hidden md:block">
+        <FullPageDiv>
+          <PageCarousel />
+        </FullPageDiv>
+      </div>
+      <div className="md:hidden w-full h-full">
         <PageCarousel />
-      </FullPageDiv>
+      </div>
     </Page>
   );
 };

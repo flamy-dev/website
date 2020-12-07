@@ -1,16 +1,15 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { services } from "../../data/services";
+import strings from "../../data/about";
 import CarouselElement from "../CarouselElement/CarouselElement";
 import Headings from "../Headings/Headings";
-import FullPageDiv from "../FullPageDiv/FullPageDiv";
 
-const PageCarousel = () => {
+const AboutCarousel = () => {
   return (
     <>
       <Carousel
         autoPlay
-        showArrows={true}
+        showArrows={false}
         className={`hidden md:block h-auto md:m-10 w-full mt-32 md:mt-0`}
         infiniteLoop
         useKeyboardArrows
@@ -18,7 +17,7 @@ const PageCarousel = () => {
         swipeable={true}
         showStatus={false}
       >
-        {services.map((service) => {
+        {strings.carousel.map((service) => {
           return (
             <CarouselElement
               key={service.heading}
@@ -29,22 +28,15 @@ const PageCarousel = () => {
           );
         })}
       </Carousel>
-      <div className="md:hidden h-auto w-full">
-        <FullPageDiv className="w-full ">
-          <Headings>
-            Services We Provide
-            <div className="animate-bounce mt-4">&#8595;</div>
-          </Headings>
-        </FullPageDiv>
-        {services.map((service) => {
+      <div className="md:hidden h-auto w-full mt-32 p-4 ">
+        {strings.carousel.map((service) => {
           return (
-            <FullPageDiv key={service.heading} noPadding={true}>
-              <CarouselElement
-                path={service.path}
-                description={service.description}
-                heading={service.heading}
-              />
-            </FullPageDiv>
+            <CarouselElement
+              key={service.heading}
+              path={service.path}
+              description={service.description}
+              heading={service.heading}
+            />
           );
         })}
       </div>
@@ -52,4 +44,4 @@ const PageCarousel = () => {
   );
 };
 
-export default PageCarousel;
+export default AboutCarousel;
