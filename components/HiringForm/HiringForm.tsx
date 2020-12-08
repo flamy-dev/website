@@ -1,3 +1,6 @@
+import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const HiringForm = (props) => {
   const { rightDiv } = props;
 
@@ -91,12 +94,7 @@ const HiringForm = (props) => {
                 htmlFor="cv"
                 className="flex justify-center items-center border-2 border-gray-100 py-2 mt-6 text-xs font-bold text-gray-600 uppercase"
               >
-                <img
-                  src="/icons/attach.svg"
-                  alt="attachment icon"
-                  className="h-8 mr-2"
-                />
-                Attach CV
+                <FontAwesomeIcon icon={faPaperclip} className="text-2xl" /> &nbsp;Attach CV
               </label>
               <input
                 id="cv"
