@@ -1,8 +1,16 @@
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 const HiringForm = (props) => {
   const { rightDiv } = props;
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    contact: "",
+    message: "",
+  });
 
   return (
     <div className="my-4 lg:my-0 grid h-full w-full place-items-center font-helvetica">
@@ -27,6 +35,12 @@ const HiringForm = (props) => {
                 placeholder="John"
                 className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                 required
+                onChange={(evt) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    firstName: evt.target.value,
+                  }))
+                }
               />
             </span>
             <span className="w-1/2">
@@ -43,6 +57,12 @@ const HiringForm = (props) => {
                 placeholder="Doe"
                 className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                 required
+                onChange={(evt) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    lastName: evt.target.value,
+                  }))
+                }
               />
             </span>
           </div>
@@ -59,6 +79,12 @@ const HiringForm = (props) => {
             placeholder="john.doe@company.com"
             className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
             required
+            onChange={(evt) =>
+              setFormData((prev) => ({
+                ...prev,
+                email: evt.target.value,
+              }))
+            }
           />
           <label
             htmlFor="phonenumber"
@@ -73,6 +99,12 @@ const HiringForm = (props) => {
             placeholder="+91 999-999-9999"
             className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
             required
+            onChange={(evt) =>
+              setFormData((prev) => ({
+                ...prev,
+                contact: evt.target.value,
+              }))
+            }
           />
           <label
             htmlFor="message"
@@ -87,6 +119,12 @@ const HiringForm = (props) => {
             placeholder="message"
             className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
             required
+            onChange={(evt) =>
+              setFormData((prev) => ({
+                ...prev,
+                message: evt.target.value,
+              }))
+            }
           />
           <div className="flex justify-between mt-2 gap-3">
             <span className="w-1/2">
