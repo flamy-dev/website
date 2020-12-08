@@ -92,7 +92,7 @@ const HiringForm = (props) => {
             <span className="w-1/2">
               <label
                 htmlFor="cv"
-                className="flex justify-center items-center border-2 border-gray-100 py-2 mt-6 text-xs font-bold text-gray-600 uppercase hover:border-gray-300 cursor-pointer"
+                className="flex justify-center items-center border-2 border-gray-100 py-2 mt-6 text-gray-600 uppercase hover:border-gray-300 cursor-pointer h-full"
               >
                 <FontAwesomeIcon icon={faPaperclip} className="text-2xl" />{" "}
                 &nbsp;Attach CV
@@ -102,16 +102,16 @@ const HiringForm = (props) => {
                 type="file"
                 name="cv"
                 placeholder="cv"
-                className="hidden w-full p-3 text-gray-700 appearance-none focus:outline-none cursor-pointer"
+                className="hidden w-full text-gray-700 appearance-none focus:outline-none cursor-pointer"
                 required
               />
             </span>
             <span className="w-1/2">
               <button
                 type="submit"
-                className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase text-blue-600 hover:text-blue-800 border-white border-2 hover:border-blue-500 focus:outline-none"
+                className="h-full w-full mt-6 font-medium tracking-widest uppercase text-blue-600 hover:text-blue-800 border-gray-100 border-2 hover:border-blue-500 focus:outline-none"
               >
-                Submit &#8594;
+                Submit
               </button>
             </span>
           </div>
