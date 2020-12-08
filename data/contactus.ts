@@ -11,7 +11,7 @@ export const contactus = [
   {
     name: "phone icon",
     icon: faPhone,
-    value: "+91 999-999-9999",
+    value: "+91 900-490-2389",
     url: "tel:+919004902389",
   },
   {
