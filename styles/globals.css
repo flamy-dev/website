@@ -25,4 +25,8 @@ a {
   background: none !important;
 }
 
+.z-top {
+  z-index: 100000;
+}
+
 @tailwind utilities;

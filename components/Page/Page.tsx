@@ -19,7 +19,6 @@ const Page = (props) => {
           </Link>
         </ContactButton>
       </NavBar>
-
       {children}
     </div>
   );

@@ -5,6 +5,8 @@ import constants from "../data/about";
 import Tagline from "../components/Tagline/Tagline";
 import ReactPageScroller from "react-page-scroller";
 import AboutCarousel from "../components/AboutCarousel/AboutCarousel";
+import AboutFlamy from "../components/AboutFlamy/AboutFlamy";
+import CarouselElement from "../components/CarouselElement/CarouselElement";
 
 const About = () => {
   const anchors = ["teaser", "meaning", "whowe", "meet"];
@@ -16,20 +18,19 @@ const About = () => {
         <ContactButton>Get in touch</ContactButton>
       </div>
     </FullPageDiv>,
-    <FullPageDiv>
-      <Tagline>{constants.tagline}</Tagline>
-      <div className="mt-8 md:mt-20">
-        <ContactButton>Get in touch</ContactButton>
-      </div>
+    <FullPageDiv noPadding={true}>
+      <AboutFlamy />
     </FullPageDiv>,
     <FullPageDiv>
       <AboutCarousel />
     </FullPageDiv>,
-    <FullPageDiv>
-      <Tagline>{constants.tagline}</Tagline>
-      <div className="mt-8 md:mt-20">
-        <ContactButton>Get in touch</ContactButton>
-      </div>
+    <FullPageDiv noPadding={true}>
+      <CarouselElement
+        path="il2.svg"
+        description={constants.about.founder}
+        isRight={true}
+        heading={constants.about.heading}
+      />
     </FullPageDiv>,
   ];
 

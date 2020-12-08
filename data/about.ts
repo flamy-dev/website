@@ -21,6 +21,7 @@ const strings = {
     },
   ],
   about: {
+    heading: "Meet the founder, Literally!",
     founder:
       "Meet Mangukiya, founder of Flamy is an engineering graduate and started Flamy in 2020 with a vision of crafting solutions for people with the help of Technology. A tech + design enthusiast who envisions combining both to create the best solutions for our clients as well as the future products of Flamy",
   },
