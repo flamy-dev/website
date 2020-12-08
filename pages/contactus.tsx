@@ -11,7 +11,7 @@ const ContactUs = () => {
   return (
     <Page title="Flamy - Contact Us">
       <FullPageDiv noPadding={true}>
-        <div className="mt-32 flex-col md:flex-row  h-full w-full flex justify-between items-center">
+        <div className="mt-32 sm:mt-36 flex-col md:flex-row  h-full w-full flex justify-between items-stretch">
           <div
             className={`
             transition-all mb-10 md:mb-0

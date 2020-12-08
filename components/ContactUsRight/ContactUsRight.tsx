@@ -1,4 +1,3 @@
-import { isJSDocAugmentsTag } from "typescript";
 import HiringForm from "../HiringForm/HiringForm";
 
 const ContactUsRight = (props) => {
@@ -15,7 +14,7 @@ const ContactUsRight = (props) => {
           Contact us for getting hired
         </div>
         {isActive && (
-          <div className="text-center mb-8">
+          <div className="text-center mb-2">
             We are constantly looking out for developers and designers.
             <br></br>
             Please reach out if you'd like to apply:

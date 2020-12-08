@@ -12,57 +12,59 @@ const HiringForm = (props) => {
     message: "",
   });
 
+  const handleFormDataChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <div className="my-4 lg:my-0 grid h-full w-full place-items-center font-helvetica">
+    <div className="my-8 lg:my-0 grid h-full w-full sm:place-items-start lg:place-items-center font-helvetica">
       <div
         className={`w-full p-2 bg-white
-        ${rightDiv ? "lg:w-2/5" : "lg:w-full"}
+        ${rightDiv ? "lg:w-3/5 xl:w-2/5" : "lg:w-full"}
       `}
       >
-        <form className="mt-6">
+        <form className="mt-6 md:mt-0" onSubmit={onSubmitHandler}>
           <div className="flex justify-between gap-3">
             <span className="w-1/2">
               <label
-                htmlFor="firstname"
+                htmlFor="firstName"
                 className="block text-xs font-bold text-gray-800 uppercase"
               >
                 Firstname
               </label>
               <input
-                id="firstname"
+                id="firstName"
                 type="text"
-                name="firstname"
+                name="firstName"
                 placeholder="John"
                 className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                 required
-                onChange={(evt) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    firstName: evt.target.value,
-                  }))
-                }
+                onChange={handleFormDataChange}
               />
             </span>
             <span className="w-1/2">
               <label
-                htmlFor="lastname"
+                htmlFor="lastName"
                 className="block text-xs font-semibold text-gray-800 uppercase"
               >
                 Lastname
               </label>
               <input
-                id="lastname"
+                id="lastName"
                 type="text"
-                name="lastname"
+                name="lastName"
                 placeholder="Doe"
                 className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                 required
-                onChange={(evt) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    lastName: evt.target.value,
-                  }))
-                }
+                onChange={handleFormDataChange}
               />
             </span>
           </div>
@@ -79,32 +81,22 @@ const HiringForm = (props) => {
             placeholder="john.doe@company.com"
             className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
             required
-            onChange={(evt) =>
-              setFormData((prev) => ({
-                ...prev,
-                email: evt.target.value,
-              }))
-            }
+            onChange={handleFormDataChange}
           />
           <label
-            htmlFor="phonenumber"
+            htmlFor="contact"
             className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
           >
             Contact Number
           </label>
           <input
-            id="phonenumber"
+            id="contact"
             type="tel"
-            name="phonenumber"
+            name="contact"
             placeholder="+91 999-999-9999"
             className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
             required
-            onChange={(evt) =>
-              setFormData((prev) => ({
-                ...prev,
-                contact: evt.target.value,
-              }))
-            }
+            onChange={handleFormDataChange}
           />
           <label
             htmlFor="message"
@@ -119,12 +111,7 @@ const HiringForm = (props) => {
             placeholder="message"
             className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
             required
-            onChange={(evt) =>
-              setFormData((prev) => ({
-                ...prev,
-                message: evt.target.value,
-              }))
-            }
+            onChange={handleFormDataChange}
           />
           <div className="flex justify-between mt-2 gap-3">
             <span className="w-1/2">
@@ -141,7 +128,6 @@ const HiringForm = (props) => {
                 name="cv"
                 placeholder="cv"
                 className="hidden w-full text-gray-700 appearance-none focus:outline-none cursor-pointer"
-                required
               />
             </span>
             <span className="w-1/2">
@@ -153,7 +139,7 @@ const HiringForm = (props) => {
               </button>
             </span>
           </div>
-          {/* <p className="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
+          {/* <p className="flex justify-between mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
             Flamy Inc.
           </p> */}
         </form>
