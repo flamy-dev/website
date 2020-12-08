@@ -92,16 +92,17 @@ const HiringForm = (props) => {
             <span className="w-1/2">
               <label
                 htmlFor="cv"
-                className="flex justify-center items-center border-2 border-gray-100 py-2 mt-6 text-xs font-bold text-gray-600 uppercase"
+                className="flex justify-center items-center border-2 border-gray-100 py-2 mt-6 text-xs font-bold text-gray-600 uppercase hover:border-gray-300 cursor-pointer"
               >
-                <FontAwesomeIcon icon={faPaperclip} className="text-2xl" /> &nbsp;Attach CV
+                <FontAwesomeIcon icon={faPaperclip} className="text-2xl" />{" "}
+                &nbsp;Attach CV
               </label>
               <input
                 id="cv"
                 type="file"
                 name="cv"
                 placeholder="cv"
-                className="hidden block w-full p-3 text-gray-700 appearance-none focus:outline-none "
+                className="hidden w-full p-3 text-gray-700 appearance-none focus:outline-none cursor-pointer"
                 required
               />
             </span>

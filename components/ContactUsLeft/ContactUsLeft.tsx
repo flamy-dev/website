@@ -1,20 +1,19 @@
 import ContactDetails from "../ContactDetails/ContactDetails";
 
 const ContactUsLeft = (props) => {
-  const { leftDiv } = props;
+  const { isActive } = props;
 
   return (
     <div className="mt-4 md:mt-0 font-helvetica flex flex-col justify-center items-center w-full p-2 h-full">
       <div className="hidden md:block w-full h-full">
         <div
           className={`text-center font-bold mb-2
-          ${leftDiv ? "text-3xl" : "text-xl"}
+          ${isActive ? "text-3xl" : "text-xl"}
         `}
         >
-          Contact us for
-          {leftDiv && <span>&nbsp;discussing a project</span>}
+          Contact us for discussing a project
         </div>
-        {leftDiv && (
+        {isActive && (
           <div className="text-center mb-8">
             We are constantly looking for new people to collaborate and work
             with.

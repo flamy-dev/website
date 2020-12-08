@@ -1,28 +1,27 @@
-import ContactDetails from "../ContactDetails/ContactDetails";
+import { isJSDocAugmentsTag } from "typescript";
 import HiringForm from "../HiringForm/HiringForm";
 
 const ContactUsRight = (props) => {
-  const { rightDiv } = props;
+  const { isActive } = props;
 
   return (
     <div className="mt-4 md:mt-0 font-helvetica flex flex-col justify-center items-center w-full md:p-2 h-full">
       <div className="hidden md:block w-full h-full">
         <div
           className={`text-center font-bold mb-2
-          ${rightDiv ? "text-3xl" : "text-xl"}
+          ${isActive ? "text-3xl" : "text-xl"}
         `}
         >
-          Contact us for
-          {rightDiv && <span>&nbsp;getting hired</span>}
+          Contact us for getting hired
         </div>
-        {rightDiv && (
+        {isActive && (
           <div className="text-center mb-8">
             We are constantly looking out for developers and designers.
             <br></br>
             Please reach out if you'd like to apply:
           </div>
         )}
-        <HiringForm rightDiv={rightDiv} />
+        <HiringForm rightDiv={isActive} />
       </div>
       {/* for small screen */}
       <div className="md:hidden">
