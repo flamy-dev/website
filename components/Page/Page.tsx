@@ -7,7 +7,7 @@ const Page = (props) => {
   const { title, children } = props;
 
   return (
-    <div className="h-full w-full ">
+    <div className="h-full w-full overflow-hidden ">
       <Head>
         <title>{title}</title>
         <link rel="icon" type="image/x-icon" href="/logo-square.svg" />

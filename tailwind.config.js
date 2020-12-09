@@ -19,6 +19,10 @@ module.exports = {
           "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg.svg')",
         about: "url('/logo-f.svg')",
       }),
+      backgroundSize: {
+        30: "30%",
+        50: "70%",
+      },
     },
   },
   variants: {
