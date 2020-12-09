@@ -16,7 +16,7 @@ const Navbar = (props) => {
 
   return (
     <div className="w-full ">
-      <div className="flex w-full items-center justify-between bg-black bg-opacity-80  px-4 py-6 text-white fixed z-100 right-0 left-0">
+      <div className="flex w-full items-center justify-between bg-black bg-opacity-80  px-4 py-6 text-white fixed z-50 right-0 left-0">
         <Link href="/">
           <a className="w-40">
             <img src="/logo-text.svg" alt="Flamy Logo" />
