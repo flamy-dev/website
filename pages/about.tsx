@@ -43,9 +43,7 @@ const About = () => {
           <ContactButton>Get in touch</ContactButton>
         </div>
       </FullPageDiv>
-      <FullPageDiv noPadding={true}>
-        <AboutFlamy />
-      </FullPageDiv>
+      <AboutFlamy />
       <AboutCarousel />
       <FullPageDiv noPadding={true} extraClass="hidden md:flex">
         <CarouselElement

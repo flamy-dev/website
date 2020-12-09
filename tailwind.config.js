@@ -23,6 +23,9 @@ module.exports = {
         30: "30%",
         50: "70%",
       },
+      width: {
+        client: "32rem",
+      },
     },
   },
   variants: {
