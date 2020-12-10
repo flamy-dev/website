@@ -35,7 +35,7 @@ a {
   /* transform: translate(-50%; -50%); */
   -webkit-overflow-scrolling: touch;
 
-  @apply h-32 w-32 bottom-7 left-3 md:bottom-10 lg:left-20 md:h-72 md:w-72 text-white absolute flex justify-center items-center border-2 border-solid border-transparent bg-transparent overflow-auto outline-none p-2 ;
+  @apply h-32 w-32 bottom-7 left-3 md:bottom-10 lg:left-20 md:h-72 md:w-72 text-white absolute flex justify-center items-center border-2 border-solid border-transparent bg-transparent overflow-auto outline-none p-2;
 }
 
 .modal-overlay {
@@ -51,7 +51,7 @@ a {
 
 .modal-2-content {
   -webkit-overflow-scrolling: touch;
-  @apply top-32 right-2 md:top-36 md:right-20 lg:right-32 text-white absolute flex justify-center border-transparent items-center border-2 border-solid bg-transparent overflow-auto outline-none p-2 ;
+  @apply top-32 right-2 md:top-36 md:right-20 lg:right-32 text-white absolute flex justify-center border-transparent items-center border-2 border-solid bg-transparent overflow-auto outline-none p-2;
 
   height: 60%;
   width: 70%;
@@ -59,13 +59,12 @@ a {
 
 .message-clip {
   clip-path: polygon(0 0, 0 75%, 10% 75%, 15% 100%, 20% 75%, 100% 75%, 100% 0);
-  border-radius: 40px; 
-
+  border-radius: 40px;
 }
 
 .message-clip-2 {
   clip-path: polygon(0 0, 0 75%, 10% 75%, 15% 100%, 20% 75%, 100% 75%, 100% 0);
-  border-radius: 40px; 
+  border-radius: 40px;
 }
 
 @tailwind utilities;
