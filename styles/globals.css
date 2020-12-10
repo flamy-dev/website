@@ -18,7 +18,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: "Montserrat";
+  @apply font-sans
 }
 
 /* background color fix */
