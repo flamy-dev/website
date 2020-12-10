@@ -18,6 +18,7 @@ module.exports = {
         darktheme:
           "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg.svg')",
         about: "url('/logo-f.svg')",
+        chatbot: "url('/chatbot.svg')",
       }),
       backgroundSize: {
         30: "30%",

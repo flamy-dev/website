@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="839px" height="629px" viewBox="0 0 839 629" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="landing-page" transform="translate(-461.000000, -234.000000)">
+            <g id="Group-9" transform="translate(56.000000, 235.000000)">
+                <g id="Icon-Group" transform="translate(406.000000, 0.000000)">
+                    <path d="M104.625,0 C46.842208,0 0,36.7121089 0,81.9987902 L0,606.504052 C0,614.799329 6.38299433,622.275928 16.1645279,625.444735 C25.9460615,628.613541 37.200166,626.849895 44.674875,620.976838 L193.922438,504.005564 C203.730651,496.316153 217.034371,491.995063 230.907375,491.992741 L732.375,491.992741 C790.157792,491.992741 837,455.280632 837,409.993951 L837,81.9987902 C837,36.7121089 790.157792,0 732.375,0 L104.625,0 Z" id="Icon-Path" stroke="#FFFFFF" fill-rule="nonzero"></path>
+                    <path d="M732.714286,41 L105.285714,41 C76.4091117,41 53,59.3554004 53,81.9979342 L53,557 L157.571429,475.004132 C177.177811,459.625858 203.771628,450.983986 231.503429,450.979342 L732.714286,450.979342 C761.590888,450.979342 785,432.623942 785,409.981408 L785,81.9979342 C785,59.3554004 761.590888,41 732.714286,41 Z" id="Icon-Path" stroke="#FFFFFF" fill="#001329" fill-rule="nonzero"></path>
+                    <text id="Hey-there!-We-would" font-family="Menlo-Bold, Menlo" font-size="40" font-weight="bold" fill="#FFFFFF">
+                        <tspan x="298.089844" y="117">Hey there!</tspan>
+                        <tspan x="538.910156" y="117" font-family="Menlo-Regular, Menlo" font-size="25" font-weight="normal"></tspan>
+                        <tspan x="418.5" y="163" font-family="Menlo-Regular, Menlo" font-size="25" font-weight="normal"></tspan>
+                        <tspan x="102.42334" y="192" font-family="Menlo-Regular, Menlo" font-size="25" font-weight="normal">We would be glad to get in touch with you!</tspan>
+                        <tspan x="418.5" y="221" font-family="Menlo-Regular, Menlo" font-size="25" font-weight="normal"></tspan>
+                        <tspan x="222.833496" y="250" font-family="Menlo-Regular, Menlo" font-size="25" font-weight="normal">How can we help you today?</tspan>
+                        <tspan x="418.5" y="279" font-family="Menlo-Regular, Menlo" font-size="25" font-weight="normal"></tspan>
+                    </text>
+                    <text id="Get-hired" font-family="Montserrat-Medium, Montserrat" font-size="25" font-weight="400" fill="#73B3FF">
+                        <tspan x="515" y="358">Get hired</tspan>
+                    </text>
+                    <text id="Discuss-a-project" font-family="Montserrat-Medium, Montserrat" font-size="25" font-weight="400" fill="#73B3FF">
+                        <tspan x="187" y="353">Discuss a project</tspan>
+                    </text>
+                    <rect id="Rectangle" fill="#73B3FF" x="190" y="364" width="212" height="4"></rect>
+                    <rect id="Rectangle" fill="#73B3FF" x="515" y="369" width="118" height="4"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

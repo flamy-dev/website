@@ -1,12 +1,12 @@
+import { useState } from "react";
 import FullPageDiv from "../components/FullPageDiv/FullPageDiv";
 import Page from "../components/Page/Page";
-import ContactButton from "../components/ContactButton/ContactButton";
 import constants from "../data/about";
-import Tagline from "../components/Tagline/Tagline";
 import AboutCarousel from "../components/AboutCarousel/AboutCarousel";
 import AboutFlamy from "../components/AboutFlamy/AboutFlamy";
 import CarouselElement from "../components/CarouselElement/CarouselElement";
 import OurClients from "../components/OurClients/OurClients";
+import Welcome from "../components/Welcome/Welcome";
 
 const About = () => {
   //   const sections = [
@@ -35,13 +35,20 @@ const About = () => {
   //     </FullPageDiv>,
   //   ];
 
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <Page title="Flamy - About">
-      <FullPageDiv extraClass="bg-about bg-center bg-no-repeat bg-50 md:bg-30 bg-opacity-20">
-        <Tagline>{constants.tagline}</Tagline>
-        <div className="mt-8 md:mt-20">
-          <ContactButton>Get in touch</ContactButton>
-        </div>
+      <FullPageDiv
+        extraClass={`bg-about bg-center bg-no-repeat bg-50 md:bg-30 bg-opacity-20 ${
+          showModal ? "opacity-30" : ""
+        }`}
+      >
+        <Welcome
+          tagline={constants.tagline}
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
       </FullPageDiv>
       <AboutFlamy />
       <AboutCarousel />

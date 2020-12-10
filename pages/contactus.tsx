@@ -5,8 +5,10 @@ import ContactUsRight from "../components/ContactUsRight/ContactUsRight";
 import FullPageDiv from "../components/FullPageDiv/FullPageDiv";
 import Page from "../components/Page/Page";
 
-const ContactUs = () => {
-  const [isLeftDivActive, setIsLeftDivActive] = useState(true);
+const ContactUs = (props) => {
+  const { active } = props;
+
+  const [isLeftDivActive, setIsLeftDivActive] = useState(active ? false : true);
 
   return (
     <Page title="Flamy - Contact Us">
