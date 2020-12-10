@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import ContactButton from "../ContactButton/ContactButton";
 import Tagline from "../Tagline/Tagline";
 import ReactModal from "react-modal";

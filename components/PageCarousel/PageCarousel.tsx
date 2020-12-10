@@ -4,7 +4,7 @@ import { services } from "../../data/services";
 import CarouselElement from "../CarouselElement/CarouselElement";
 import Headings from "../Headings/Headings";
 import FullPageDiv from "../FullPageDiv/FullPageDiv";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import _ from "lodash";
 
 const PageCarousel = () => {

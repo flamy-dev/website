@@ -2,7 +2,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import strings from "../../data/about";
 import CarouselElement from "../CarouselElement/CarouselElement";
-import Headings from "../Headings/Headings";
 import FullPageDiv from "../FullPageDiv/FullPageDiv";
 
 const AboutCarousel = () => {

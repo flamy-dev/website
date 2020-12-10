@@ -7,7 +7,8 @@
     "build": "next build; next export",
     "start": "next start",
     "check-prettier": "prettier --check .",
-    "prettify": "prettier --write ."
+    "prettify": "prettier --write .",
+    "compile": "tsc"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

@@ -1,12 +1,10 @@
 import "../styles/globals.css";
-import { useState, useEffect } from "react";
 
 const MyApp = ({ Component, pageProps }) => {
-  const [isLoaderVisible, setIsLoaderVisible] = useState(true);
-
-  useEffect(() => {
-    window.onload = () => setIsLoaderVisible(false);
-  }, []);
+  // const [isLoaderVisible, setIsLoaderVisible] = useState(true);
+  // useEffect(() => {
+  //   window.onload = () => setIsLoaderVisible(false);
+  // }, []);
 
   return (
     <>

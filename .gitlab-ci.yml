@@ -10,6 +10,11 @@ prettier:
     - yarn
     - yarn check-prettier
 
+compile:
+  script:
+    - yarn
+    - yarn compile
+
 pages:
   stage: deploy
   script:
