@@ -12,7 +12,7 @@ const Welcome = (props) => {
   }
 
   return (
-    <>
+    <div className="z-10">
       <Tagline>{tagline}</Tagline>
       <div className="mt-8 md:mt-20">
         <ContactButton setShowModal={setShowModal}>Get in touch</ContactButton>
@@ -65,7 +65,7 @@ const Welcome = (props) => {
           </div>
         </div>
       </ReactModal>
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 const FullPageDiv = (props) => {
-  const { children, noPadding, extraClass } = props;
+  const { children, noPadding, extraClass, ...rest } = props;
 
   return (
     <div
@@ -7,6 +7,7 @@ const FullPageDiv = (props) => {
       ${noPadding ? "p-4 sm:p-0" : "p-4 md:p-20"}
       ${extraClass ? extraClass : ""}
     `}
+      {...rest}
     >
       {children}
     </div>

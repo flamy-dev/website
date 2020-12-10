@@ -43,6 +43,7 @@ const About = () => {
         extraClass={`bg-about bg-center bg-no-repeat bg-50 md:bg-30 bg-opacity-20 ${
           showModal ? "opacity-30" : ""
         }`}
+        id="about-hero"
       >
         <Welcome
           tagline={constants.tagline}
