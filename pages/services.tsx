@@ -38,7 +38,7 @@ class Services extends React.Component<Props, State> {
         <div className="md:hidden text-white">
           <ReactFullPage
             onLeave={this.onLeave.bind(this)}
-            render={(comp) => (
+            render={(_) => (
               <ReactFullPage.Wrapper>
                 <div className="section text-white">
                   <Headings>
