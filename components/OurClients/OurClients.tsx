@@ -12,12 +12,12 @@ const OurClients = () => {
 
       <div className="flex flex-col flex-wrap items-center justify-center lg:justify-between w-full md:w-client mb-4 md:mb-16 ">
         {_.chunk(clients, chunkSize).map((clientChunk) => (
-          <div className="flex flex-row">
+          <div className="flex flex-row items-center">
             {clientChunk.map(({ link, logoPath }) => (
               <a href={link} target="_blank">
                 <img
                   src={logoPath}
-                  className="w-24 md:w-32 opacity-30 hover:opacity-100 transition-all"
+                  className="w-24 m-5 md:w-32 opacity-50 hover:opacity-100 transition-all"
                 />
               </a>
             ))}
