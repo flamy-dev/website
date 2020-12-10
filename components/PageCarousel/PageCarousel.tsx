@@ -2,8 +2,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { services } from "../../data/services";
 import CarouselElement from "../CarouselElement/CarouselElement";
-import Headings from "../Headings/Headings";
-import FullPageDiv from "../FullPageDiv/FullPageDiv";
 import { useState, useCallback } from "react";
 import _ from "lodash";
 
@@ -46,25 +44,6 @@ const PageCarousel = () => {
           );
         })}
       </Carousel>
-      <div className="md:hidden h-auto w-full">
-        <FullPageDiv className="w-full ">
-          <Headings>
-            Services We Provide
-            <div className="animate-bounce mt-4">&#8595;</div>
-          </Headings>
-        </FullPageDiv>
-        {services.map((service) => {
-          return (
-            <FullPageDiv key={service.heading} noPadding={true}>
-              <CarouselElement
-                path={service.path}
-                description={service.description}
-                heading={service.heading}
-              />
-            </FullPageDiv>
-          );
-        })}
-      </div>
     </div>
   );
 };
