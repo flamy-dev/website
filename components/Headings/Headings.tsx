@@ -5,7 +5,7 @@ const Headings = (props) => {
     <h2
       className={`
       flex justify-center items-center flex-col
-      font-helvetica font-extrabold text-4xl tracking-wide
+      font-extrabold text-4xl tracking-wide
       md:text-6xl text-center
       `}
     >

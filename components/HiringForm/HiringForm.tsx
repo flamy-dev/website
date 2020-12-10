@@ -25,7 +25,7 @@ const HiringForm = (props) => {
   };
 
   return (
-    <div className="my-8 lg:my-0 grid h-full w-full sm:place-items-start lg:place-items-center font-helvetica">
+    <div className="my-8 lg:my-0 grid h-full w-full sm:place-items-start lg:place-items-center">
       <div
         className={`w-full p-2 bg-white
         ${rightDiv ? "lg:w-3/5 xl:w-2/5" : "lg:w-full"}

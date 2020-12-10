@@ -4,7 +4,7 @@ const ContactUsLeft = (props) => {
   const { isActive } = props;
 
   return (
-    <div className="mt-4 md:mt-0 font-helvetica flex flex-col justify-center items-center w-full p-2 h-full">
+    <div className="mt-4 md:mt-0 flex flex-col justify-center items-center w-full p-2 h-full">
       <div className="hidden md:block w-full h-full">
         <div
           className={`text-center font-bold mb-2

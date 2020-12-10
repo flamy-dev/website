@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContactDetails = () => {
   return (
-    <div className="flex justify-center items-center w-full py-4 font-helvetica">
+    <div className="flex justify-center items-center w-full py-4">
       <div className="flex flex-col justify-center mt-2 ml-8">
         {contactus.map((contact) => (
           <div

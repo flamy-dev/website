@@ -6,7 +6,7 @@ const AboutFlamy = () => {
   return (
     <>
       <FullPageDiv noPadding={true} extraClass="hidden md:flex">
-        <div className="text-gray-200 flex flex-row justify-between items-center w-full h-full text-center font-helvetica p-4 lg:px-20 text-xl">
+        <div className="text-gray-200 flex flex-row justify-between items-center w-full h-full text-center p-4 lg:px-20 text-xl">
           <AboutFlamyElement
             description={constants.logo.f_meaning}
             logo="/logo-f.svg"

@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ["Montserrat", "sans-serif"],
         helvetica: ["Helvetica", "sans-serif"],
       },
       backgroundImage: (theme) => ({
