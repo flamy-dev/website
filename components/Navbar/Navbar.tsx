@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import StyledNavLink from "../StyledNavLink/StyledNavLink";
+import MobileNav from "../MobileNav/MobileNav";
 
 const Navbar = (props) => {
   const { children } = props;
@@ -69,6 +70,10 @@ const Navbar = (props) => {
             </svg>
           </button>
         </div>
+
+        {mobileMenu && (
+          <MobileNav mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
+        )}
       </div>
     </div>
   );
