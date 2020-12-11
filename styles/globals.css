@@ -85,9 +85,9 @@ a {
 /* Anchor animations */
 
 .animated-link::after {
-  content: '';
+  content: "";
   width: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
   @apply block h-1 bg-blue-900;
 }
 
