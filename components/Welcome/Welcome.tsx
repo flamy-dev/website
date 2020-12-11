@@ -43,7 +43,7 @@ const Welcome = (props) => {
       >
         <div className="w-full h-full message-clip-2 rounded-2xl bg-white lg:w-4/5">
           <div className="message-clip w-full h-4/5 p-2 md:p-10 ">
-            <div className="text-center p-2 bg-blue-900 rounded-2xl flex flex-col justify-start pt-12 md:p-20 items-center h-full ">
+            <div className="text-center p-2 bg-black rounded-2xl flex flex-col justify-start pt-12 md:p-20 items-center h-full ">
               <h1 className="text-2xl md:text-5xl">Hey there!</h1>
               <p className="text-lg ">
                 We would be glad to get in touch with you!
@@ -51,12 +51,12 @@ const Welcome = (props) => {
               </p>
               <div className=" flex flex-col md:flex-row justify-around items-center w-full mt-4">
                 <Link href="/contactus">
-                  <a className="border-b-4 border-blue-500 hover:border-blue-200 text-md md:text-xl text-blue-500 hover:text-blue-200">
+                  <a className="animated-link hover:border-blue-200 text-md md:text-xl text-blue-500 hover:text-blue-200">
                     Discuss a project
                   </a>
                 </Link>
                 <Link href="/contactus">
-                  <a className="border-b-4 border-blue-500 hover:border-blue-200 text-md md:text-xl text-blue-500 hover:text-blue-200">
+                  <a className="animated-link hover:border-blue-200 text-md md:text-xl text-blue-500 hover:text-blue-200">
                     Get hired
                   </a>
                 </Link>

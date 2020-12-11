@@ -5,7 +5,9 @@ import CarouselElement from "../CarouselElement/CarouselElement";
 import { useState, useCallback } from "react";
 import _ from "lodash";
 
-const PageCarousel = () => {
+const PageCarousel = (props) => {
+  const { fromServices } = props;
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () =>
@@ -36,6 +38,7 @@ const PageCarousel = () => {
         {services.map((service) => {
           return (
             <CarouselElement
+              fromServices={fromServices}
               key={service.heading}
               path={service.path}
               description={service.description}

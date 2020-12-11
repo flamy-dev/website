@@ -3,9 +3,10 @@ interface CarouselData {
   description: string;
   heading: string;
   isRight?: boolean;
+  fromServices?: boolean;
 }
 const CarouselElement = (props: CarouselData) => {
-  const { path, description, heading, isRight } = props;
+  const { path, description, heading, isRight, fromServices } = props;
   return (
     <div className="pt-28 md:p-10 flex flex-col justify-center items-center md:flex-row h-full">
       {isRight ? null : (
@@ -17,7 +18,11 @@ const CarouselElement = (props: CarouselData) => {
         <h3 className="font-extrabold text-center text-3xl md:text-5xl mb-2 md:mb-8 px-2">
           {heading}
         </h3>
-        <p className="text-sm p-2 md:p-1  md:m-0 text-center md:text-lg lg:text-2xl w-full shadow-2xl text-gray-200">
+        <p
+          className={`text-sm p-2 md:p-1  md:m-0 text-center md:text-lg lg:text-2xl w-full shadow-2xl text-gray-200 ${
+            fromServices ? "box-shadow-services " : ""
+          }`}
+        >
           {description}
         </p>
       </div>

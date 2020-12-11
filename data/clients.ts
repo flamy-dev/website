@@ -21,13 +21,16 @@ export default [
   {
     logoPath: "./hypo-advisors-logo.png",
     link: "https://www.hypo-advisors.ch/",
+    needBg: true,
   },
   {
     logoPath: "./digitika-logo.png",
     link: "https://www.digitika.co.ke",
+    needBg: true,
   },
   {
     logoPath: "./hublemania-logo.png",
     link: "https://www.hublemania.ch/",
+    needBg: true,
   },
 ];

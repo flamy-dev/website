@@ -12,7 +12,7 @@ const ContactDetails = () => {
           >
             <a
               href={contact.url}
-              className="text-black hover:text-blue-800"
+              className="text-black hover:text-blue-800 animated-link"
               target="_blank"
             >
               <FontAwesomeIcon icon={contact.icon} size="lg" />

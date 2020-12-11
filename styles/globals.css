@@ -82,4 +82,38 @@ a {
   opacity: 0.25;
 }
 
+/* Anchor animations */
+
+.animated-link::after {
+  content: '';
+  width: 100%;
+  transition: width .3s;
+  @apply block h-1 bg-blue-900;
+}
+
+.animated-link:hover::after {
+  width: 10%;
+}
+
+/* clients section  */
+
+.grayscale {
+  filter: grayscale(100%);
+  transition: all 1s ease-in;
+}
+
+.grayscale:hover {
+  filter: grayscale(0%);
+}
+
+/* box shadow */
+
+/* .box-shadow {
+  box-shadow: 0 0 10px #1E3A8A, 0 0 40px #1E3A8A, 0 0 80px #1E3A8A;
+} */
+
+.box-shadow-services {
+  box-shadow: 0 0 10px green, 0 0 40px green, 0 0 80px green;
+}
+
 @tailwind utilities;

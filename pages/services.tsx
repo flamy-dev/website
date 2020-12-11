@@ -32,7 +32,7 @@ class Services extends React.Component<Props, State> {
         <Menu /> */}
         <div className="w-full h-full hidden md:block">
           <FullPageDiv>
-            <PageCarousel />
+            <PageCarousel fromServices={true} />
           </FullPageDiv>
         </div>
         <div className="md:hidden text-white">
