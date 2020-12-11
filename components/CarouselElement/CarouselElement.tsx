@@ -10,11 +10,11 @@ const CarouselElement = (props: CarouselData) => {
   return (
     <div className="pt-28 md:p-10 flex flex-col justify-center items-center md:flex-row h-full">
       {isRight ? null : (
-        <div className="w-7/12 md:pr-10 lg:w-4/12 flex justify-center items-center h-full">
+        <div className="w-7/12 md:pr-10 lg:w-4/12 flex justify-center items-center">
           <img src={path} alt={heading} className="h-full w-full" />
         </div>
       )}
-      <div className="flex flex-col justify-center md:justify-center items-center h-full pb-8 md:py-10 md:w-3/5">
+      <div className="flex flex-col justify-center items-center pb-8 md:py-10 md:w-3/5 mt-4">
         <h3 className="font-extrabold text-center text-3xl md:text-5xl mb-2 md:mb-8 px-2">
           {heading}
         </h3>
