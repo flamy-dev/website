@@ -1,7 +1,8 @@
-import { contactus } from "../../data/contactus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ContactDetails = () => {
+const ContactDetails = (props) => {
+  const { contactus } = props;
+
   return (
     <div className="flex justify-center items-center w-full py-4">
       <div className="flex flex-col justify-center mt-2 ml-8">
@@ -12,7 +13,7 @@ const ContactDetails = () => {
           >
             <a
               href={contact.url}
-              className="text-black hover:text-blue-800 animated-link"
+              className="text-black hover:text-blue-800"
               target="_blank"
             >
               <FontAwesomeIcon icon={contact.icon} size="lg" />

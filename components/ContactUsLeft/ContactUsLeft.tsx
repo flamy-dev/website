@@ -1,7 +1,7 @@
 import ContactDetails from "../ContactDetails/ContactDetails";
 
 const ContactUsLeft = (props) => {
-  const { isActive } = props;
+  const { isActive, contactus } = props;
 
   return (
     <div className="mt-4 md:mt-0 flex flex-col justify-center items-center w-full p-2 h-full">
@@ -21,7 +21,7 @@ const ContactUsLeft = (props) => {
             Get in touch by any of the following means:
           </div>
         )}
-        <ContactDetails />
+        <ContactDetails contactus={contactus} />
       </div>
       {/* for small screen */}
       <div className="md:hidden">
@@ -33,7 +33,7 @@ const ContactUsLeft = (props) => {
           We are constantly looking for new people to collaborate and work with.
           Get in touch by any of the following means:
         </div>
-        <ContactDetails />
+        <ContactDetails contactus={contactus} />
       </div>
     </div>
   );

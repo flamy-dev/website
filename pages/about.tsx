@@ -7,6 +7,8 @@ import AboutFlamy from "../components/AboutFlamy/AboutFlamy";
 import CarouselElement from "../components/CarouselElement/CarouselElement";
 import OurClients from "../components/OurClients/OurClients";
 import Welcome from "../components/Welcome/Welcome";
+import strings from "../data/about";
+import clients from "../data/clients";
 
 const About = () => {
   const [showModal, setShowModal] = useState(false);
@@ -26,7 +28,7 @@ const About = () => {
         />
       </FullPageDiv>
       <AboutFlamy />
-      <AboutCarousel />
+      <AboutCarousel strings={strings} />
       <FullPageDiv noPadding={true} extraClass="hidden md:flex">
         <CarouselElement
           path="il2.svg"
@@ -43,7 +45,7 @@ const About = () => {
         />
       </FullPageDiv>
       <FullPageDiv noPadding={true}>
-        <OurClients />
+        <OurClients clients={clients} />
       </FullPageDiv>
     </Page>
   );

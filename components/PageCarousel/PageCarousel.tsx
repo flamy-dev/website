@@ -1,12 +1,11 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { services } from "../../data/services";
 import CarouselElement from "../CarouselElement/CarouselElement";
 import { useState, useCallback } from "react";
 import _ from "lodash";
 
 const PageCarousel = (props) => {
-  const { fromServices } = props;
+  const { fromServices, services } = props;
 
   const [currentSlide, setCurrentSlide] = useState(0);
 

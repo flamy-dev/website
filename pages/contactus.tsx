@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ContactUsLeft from "../components/ContactUsLeft/ContactUsLeft";
 import ContactUsRight from "../components/ContactUsRight/ContactUsRight";
-
+import { contactus } from "../data/contactus";
 import FullPageDiv from "../components/FullPageDiv/FullPageDiv";
 import Page from "../components/Page/Page";
 
@@ -24,7 +24,7 @@ const ContactUs = (props) => {
               setIsLeftDivActive(true);
             }}
           >
-            <ContactUsLeft isActive={isLeftDivActive} />
+            <ContactUsLeft isActive={isLeftDivActive} contactus={contactus} />
           </div>
           <div
             className={`

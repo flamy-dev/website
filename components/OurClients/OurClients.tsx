@@ -1,7 +1,7 @@
 import _ from "lodash";
-import clients from "../../data/clients";
 
-const OurClients = () => {
+const OurClients = (props) => {
+  const { clients } = props;
   const chunkSize = 3;
 
   return (
