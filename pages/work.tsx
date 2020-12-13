@@ -5,7 +5,7 @@ import Page from "../components/Page/Page";
 const Work = () => {
   const [ele, setEle] = useState(null);
   const [showButton, setShowButton] = useState(null);
-
+  console.log(ele);
   const toggleExpansion = (element, to, duration = 350) => {
     return new Promise((res) => {
       requestAnimationFrame(() => {
@@ -80,8 +80,8 @@ const Work = () => {
     } = card.parentNode.getBoundingClientRect();
 
     await toggleExpansion(cloned, {
-      top: 0,
-      left: 0,
+      top: parentTop + "px",
+      left: parentLeft + "px",
       width: parentWidth + "px",
       height: parentHeight + "px",
     });
