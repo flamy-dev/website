@@ -28,6 +28,7 @@ module.exports = {
       },
       width: {
         client: "32rem",
+        1000: "1000px",
       },
     },
   },

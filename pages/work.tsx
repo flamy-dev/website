@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import FullPageDiv from "../components/FullPageDiv/FullPageDiv";
 import Page from "../components/Page/Page";
+import clients from "../data/clients";
+import { workDetail } from "../utils/workDetail";
 
 const Work = () => {
   const [ele, setEle] = useState(null);
   const [showButton, setShowButton] = useState(null);
+
+  // const details = {
+  //   logoPath: "/logo.svg",
+  // };
+
   console.log(ele);
   const toggleExpansion = (element, to, duration = 350) => {
     return new Promise((res) => {
@@ -22,6 +28,9 @@ const Work = () => {
         element.style.left = to.left;
         element.style.width = to.width;
         element.style.height = to.height;
+        element.style.zIndex = to.zIndex ? to.zIndex : "";
+        element.style.oveflow = "scroll";
+        element.style.minHeight = to.height === "100vh" ? "100vh" : "";
       });
       setTimeout(res, duration);
     });
@@ -39,7 +48,7 @@ const Work = () => {
     });
   };
 
-  const handleMe = async (e) => {
+  const handleMe = async (e, client) => {
     setEle(e);
     console.log(e.currentTarget);
     const card = e.currentTarget;
@@ -72,21 +81,22 @@ const Work = () => {
       [...cloned.children].forEach((child) => (child.style.display = "none"));
     });
 
-    const {
-      top: parentTop,
-      left: parentLeft,
-      width: parentWidth,
-      height: parentHeight,
-    } = card.parentNode.getBoundingClientRect();
+    // const {
+    //   top: parentTop,
+    //   left: parentLeft,
+    //   width: parentWidth,
+    //   height: parentHeight,
+    // } = card.parentNode.getBoundingClientRect();
 
     await toggleExpansion(cloned, {
-      top: parentTop + "px",
-      left: parentLeft + "px",
-      width: parentWidth + "px",
-      height: parentHeight + "px",
+      top: "0px",
+      left: "0px",
+      width: "100vw",
+      height: "100vh",
+      zIndex: "100",
     });
 
-    const content = "some content";
+    const content = workDetail(client);
 
     cloned.style.display = "block";
     cloned.style.padding = "0";
@@ -106,7 +116,7 @@ const Work = () => {
       child.style.removeProperty("display");
     });
 
-    // fadeContent(cloned, '0');
+    fadeContent(cloned, "0", 20);
     //shrink card back
 
     await toggleExpansion(cloned, {
@@ -122,44 +132,35 @@ const Work = () => {
 
   return (
     <Page title="Flamy - Work">
-      <FullPageDiv>
-        <div className="h-full w-full flex justify-center items-center flex-col">
-          <div
-            className={` overflow-hidden text-white flex items-center justify-between flex-wrap w-full h-eighty md:w-4/5 lg:w-3/5 xl:w-2/5  border-2 border-white`}
-          >
-            <div
-              className=" bg-white cursor-pointer bg-opacity-25 border-2 border-white p-2"
-              onClick={(e) => handleMe(e)}
-            >
-              <img src="./bklyn-logo.png" alt="its a logo" />
-            </div>
-
-            <div
-              className=" bg-white cursor-pointer bg-opacity-25 border-2 border-white p-2"
-              onClick={(e) => handleMe(e)}
-            >
-              <img src="./bklyn-logo.png" alt="its a logo" />
-            </div>
-            <div
-              className=" bg-white cursor-pointer bg-opacity-25 border-2 border-white p-2"
-              onClick={(e) => handleMe(e)}
-            >
-              <img src="./bklyn-logo.png" alt="its a logo" />
-            </div>
+      <div className="w-screen flex justify-center items-center">
+        <div className="pt-40 h-full w-full lg:w-1000 flex justify-center items-center flex-col px-2 text-white mb-10">
+          <h1 className="text-5xl mb-4">
+            Our <span className="font-extrabold">Work</span>
+          </h1>
+          <div className="containerN p-10">
+            {clients.map((client) => (
+              <div
+                className="box cursor-pointer"
+                onClick={(e) => handleMe(e, client)}
+              >
+                <div className="content">
+                  <img src={client.logoPath} alt="client" className="md:w-80" />
+                  {/* <h3>Brand Name</h3> */}
+                </div>
+              </div>
+            ))}
           </div>
 
           <button
-            className={`top-10 border-2 focus:outline-none ${
-              !showButton
-                ? "text-transparent border-transparent"
-                : "text-white border-white"
+            className={`btn top-10 border-2 focus:outline-none ${
+              !showButton ? "hidden" : "text-white border-white"
             }`}
             onClick={removeFromDom}
           >
             Close
           </button>
         </div>
-      </FullPageDiv>
+      </div>
     </Page>
   );
 };
