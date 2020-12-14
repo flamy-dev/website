@@ -3,6 +3,13 @@ import Page from "../components/Page/Page";
 import clients from "../data/clients";
 import { workDetail } from "../utils/workDetail";
 
+interface Client {
+  logoPath: string;
+  link: string;
+  row?: number;
+  col?: number;
+}
+
 const Work = () => {
   const [ele, setEle] = useState(null);
   const [showButton, setShowButton] = useState(null);
@@ -138,9 +145,12 @@ const Work = () => {
             Our <span className="font-extrabold">Work</span>
           </h1>
           <div className="containerN p-10">
-            {clients.map((client) => (
+            {clients.map((client: Client) => (
               <div
-                className="box cursor-pointer"
+                key={client.logoPath}
+                className={`box cursor-pointer ${
+                  client.row ? `row-span-${client.row}` : ""
+                } ${client.col ? `col-span-${client.col}` : ""}`}
                 onClick={(e) => handleMe(e, client)}
               >
                 <div className="content">
