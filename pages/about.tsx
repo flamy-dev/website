@@ -10,6 +10,7 @@ import strings from "../data/about";
 import clients from "../data/clients";
 import MediaQuery from "react-responsive";
 import AboutFlamyElement from "../components/AboutFlamyElement/AboutFlamyElement";
+import AboutCarousel from "../components/AboutCarousel/AboutCarousel";
 
 interface Props {}
 
@@ -73,7 +74,11 @@ class TempAbout extends React.Component<Props, State> {
                       />
                     </div>
                   </FullPageDiv>
-                  {/* <AboutCarousel strings={strings} /> */}
+                  <AboutCarousel
+                    strings={strings}
+                    parentClass="section"
+                    slideClass="slide"
+                  />
                   <FullPageDiv noPadding={true}>
                     <CarouselElement
                       path="il2.svg"
