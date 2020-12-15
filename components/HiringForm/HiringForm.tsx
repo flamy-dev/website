@@ -92,7 +92,8 @@ const HiringForm = (props) => {
           }}
         >
           {(formik) => (
-            <form className="mt-6 md:mt-0" onSubmit={formik.handleSubmit}>
+            // @ts-ignore
+            <form className="mt-6 md:mt-0" onSubmit={formik.handleSubmit} netlify>
               <div className="flex justify-between gap-3">
                 <span className="w-1/2">
                   <label
