@@ -123,20 +123,11 @@ class TempAbout extends React.Component<Props, State> {
                       logo="/logo-phoenix.svg"
                     />
                   </div>
-                  {strings.carousel.map((service) => {
-                    return (
-                      <div
-                        className="section text-center"
-                        key={service.heading}
-                      >
-                        <CarouselElement
-                          path={service.path}
-                          description={service.description}
-                          heading={service.heading}
-                        />
-                      </div>
-                    );
-                  })}
+                  <AboutCarousel
+                    strings={strings}
+                    parentClass="section"
+                    slideClass="slide"
+                  />
                   <div className="section text-center ">
                     <CarouselElement
                       path="il2.svg"
