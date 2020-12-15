@@ -1,7 +1,7 @@
 const AboutFlamyElement = (props) => {
   const { logo, description } = props;
   return (
-    <div className="flex flex-col justify-center items-center w-full md:w-2/5 md:self-start px-1">
+    <div className="flex flex-col justify-center items-center w-full md:w-2/5 px-1">
       <img
         src={logo}
         alt="Flamy Logo Meaning"

@@ -169,7 +169,7 @@ const Work = () => {
           </div>
 
           <button
-            className={`btn top-10 border-2 focus:outline-none ${
+            className={`btn top-10 md:right-10 border-2 focus:outline-none ${
               !showButton ? "hidden" : "text-white border-white"
             }`}
             onClick={removeFromDom}
