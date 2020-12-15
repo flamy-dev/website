@@ -1,4 +1,3 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CarouselElement from "../CarouselElement/CarouselElement";
 
 const AboutCarousel = (props) => {
