@@ -4,7 +4,7 @@ import CarouselElement from "../CarouselElement/CarouselElement";
 const AboutCarousel = (props) => {
   const { strings, parentClass = "", slideClass = "" } = props;
   return (
-    <div className={parentClass}>
+    <div className={`${parentClass} text-center`}>
       {strings.carousel.map((service) => {
         return (
           <CarouselElement

@@ -43,6 +43,8 @@ class TempAbout extends React.Component<Props, State> {
         <div className="text-white w-full h-full">
           <MediaQuery minDeviceWidth={1000}>
             <ReactFullPage
+              slidesNavigation={true}
+              navigation={true}
               onLeave={this.onLeave}
               render={(_) => (
                 <ReactFullPage.Wrapper>
