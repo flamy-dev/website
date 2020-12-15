@@ -8,6 +8,7 @@ interface Client {
   link: string;
   row?: number;
   col?: number;
+  needBg?: boolean;
 }
 
 const Work = () => {
@@ -148,13 +149,19 @@ const Work = () => {
             {clients.map((client: Client) => (
               <div
                 key={client.logoPath}
-                className={`box cursor-pointer ${
+                className={`group box cursor-pointer bg-opacity-40 ${
                   client.row ? `row-span-${client.row}` : ""
                 } ${client.col ? `col-span-${client.col}` : ""}`}
                 onClick={(e) => handleMe(e, client)}
               >
                 <div className="content">
-                  <img src={client.logoPath} alt="client" className="md:w-80" />
+                  <img
+                    src={client.logoPath}
+                    alt="client"
+                    className={`md:w-80 ${
+                      client.needBg ? "group-hover:bg-white p-2" : ""
+                    }`}
+                  />
                   {/* <h3>Brand Name</h3> */}
                 </div>
               </div>

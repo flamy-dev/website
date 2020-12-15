@@ -5,7 +5,7 @@ const OurClients = (props) => {
   const chunkSize = 3;
 
   return (
-    <div className="pt-12 flex flex-col justify-end items-center w-11/12 h-full">
+    <div className="pt-12 w-full flex flex-col justify-end items-center md:w-11/12 h-full">
       <div className="flex justify-center items-center text-3xl mb-2 md:text-5xl md:mb-10">
         Our <span className="font-bold">&nbsp; Clients</span>
       </div>
@@ -17,7 +17,7 @@ const OurClients = (props) => {
               <a href={link} target="_blank" key={logoPath}>
                 <img
                   src={logoPath}
-                  className={`w-24 m-5 md:w-32 grayscale transition-all ${
+                  className={`w-24 m-5 ml-1 md:m-5 md:w-32 grayscale transition-all ${
                     needBg ? "bg-white p-2 " : ""
                   }`}
                 />

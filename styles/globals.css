@@ -96,14 +96,15 @@ a {
 }
 
 /* clients section  */
+@media only screen and (min-width: 1000px) {
+  .grayscale {
+    filter: grayscale(100%);
+    transition: all 1s ease-in;
+  }
 
-.grayscale {
-  filter: grayscale(100%);
-  transition: all 1s ease-in;
-}
-
-.grayscale:hover {
-  filter: grayscale(0%);
+  .grayscale:hover {
+    filter: grayscale(0%);
+  }
 }
 
 /* box shadow */
@@ -155,7 +156,12 @@ a {
 }
 
 .containerN .box:hover {
-  background: orange;
+  background: rgb(182, 25, 0);
+  background: linear-gradient(
+    49deg,
+    rgba(182, 25, 0, 1) 0%,
+    rgba(0, 63, 136, 1) 100%
+  );
 }
 
 .containerN .box img {
@@ -211,11 +217,10 @@ a {
 
 @media only screen and (max-width: 600px) {
   .containerN {
-    grid-template-columns: 1fr;
-  }
-  .containerN .box > * {
-    grid-column: span 1;
-    grid-row: span 1;
+    display: flex;
+    justify-items: center;
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 
