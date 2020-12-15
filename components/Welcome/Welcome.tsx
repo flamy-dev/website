@@ -15,7 +15,11 @@ const Welcome = (props) => {
     <div className="z-10">
       <Tagline>{tagline}</Tagline>
       <div className="mt-8 md:mt-20 z-20">
-        <ContactButton setShowModal={setShowModal}>Get in touch</ContactButton>
+        <ContactButton>
+          <Link href="/contactus">
+            <a>Get in touch</a>
+          </Link>
+        </ContactButton>
       </div>
       <ReactModal
         isOpen={showModal}

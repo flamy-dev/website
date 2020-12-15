@@ -79,6 +79,7 @@ a {
   right: 0px;
   bottom: 0px;
   left: 0px;
+  z-index: -10;
   opacity: 0.25;
 }
 

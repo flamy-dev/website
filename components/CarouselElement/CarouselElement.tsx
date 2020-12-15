@@ -8,7 +8,7 @@ interface CarouselData {
 const CarouselElement = (props: CarouselData) => {
   const { path, description, heading, isRight, fromServices } = props;
   return (
-    <div className="pt-28 md:p-10 flex flex-col justify-center items-center md:flex-row h-full">
+    <div className="text-white pt-28 md:p-10 flex flex-col justify-center items-center md:flex-row h-full">
       {isRight ? null : (
         <div className="w-7/12 md:pr-10 lg:w-4/12 flex justify-center items-center">
           <img src={path} alt={heading} className="h-full w-full" />
