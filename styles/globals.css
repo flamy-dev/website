@@ -37,11 +37,7 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(182, 25, 0);
-  background: linear-gradient(
-    49deg,
-    rgb(161, 23, 2) 0%,
-    rgb(1, 56, 119) 100%
-  );
+  background: linear-gradient(49deg, rgb(161, 23, 2) 0%, rgb(1, 56, 119) 100%);
 }
 
 /* general  */
@@ -276,6 +272,107 @@ a {
     align-items: stretch;
     flex-direction: column;
   }
+}
+
+/* loader */
+@keyframes f-zoomin {
+  from {
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+  16.6%,
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes f-slidein-right {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  16.6%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes head-top-slidein {
+  from,
+  16.6% {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  33.2%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes beak-slidein-left {
+  from,
+  33.2% {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  49.8%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes beak-bottom-slidein-corner {
+  from,
+  49.8% {
+    transform: translate3d(-100%, 100%, 0);
+    visibility: visible;
+  }
+  66.4%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes neck-slidein-up {
+  from,
+  66.4% {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  83% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#letter-f {
+  animation: f-slidein-right;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+#head-top {
+  animation: head-top-slidein;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+#beak-top {
+  animation: beak-slidein-left;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+#beak-bottom {
+  animation: beak-bottom-slidein-corner;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+#neck {
+  animation: neck-slidein-up;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
 }
 
 @tailwind utilities;
