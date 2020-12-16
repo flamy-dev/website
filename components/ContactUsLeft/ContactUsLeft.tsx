@@ -13,15 +13,18 @@ const ContactUsLeft = (props) => {
         >
           Contact us for discussing a project
         </div>
-        {isActive && (
-          <div className="text-center mb-8">
-            We are constantly looking for new people to collaborate and work
-            with.
-            <br></br>
-            Get in touch by any of the following means:
-          </div>
-        )}
-        <ContactDetails contactus={contactus} />
+
+        <div
+          className={`text-center mb-2 ${
+            isActive ? "text-black" : "text-white"
+          }`}
+        >
+          We are constantly looking for new people to collaborate and work with.
+          <br></br>
+          Get in touch by any of the following means.
+        </div>
+
+        <ContactDetails contactus={contactus} isLeftDivActive={isActive} />
       </div>
       {/* for small screen */}
       <div className="md:hidden">
@@ -33,7 +36,7 @@ const ContactUsLeft = (props) => {
           We are constantly looking for new people to collaborate and work with.
           Get in touch by any of the following means:
         </div>
-        <ContactDetails contactus={contactus} />
+        <ContactDetails contactus={contactus} isLeftDivActive={isActive} />
       </div>
     </div>
   );
