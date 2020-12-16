@@ -10,21 +10,6 @@ const DiscussForm = (props) => {
   const { isLeftDivActive } = props;
   const formRef = useRef();
 
-  //If we need to take contact number...
-
-  // const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
-  //If we need Error to be displayed instead of highlighting border...
-
-  // const ErrorComponent = (props) => {
-  //   console.log(props);
-  //   return (
-  //     <div className="pt-4 text-red-700 text-base flex justify-center items-center h-2 w-full">
-  //       {props.children}
-  //     </div>
-  //   );
-  // };
-
   return (
     <div className="my-8 lg:my-0 grid h-full w-full sm:place-items-start lg:place-items-center">
       <div
@@ -38,7 +23,6 @@ const DiscussForm = (props) => {
             firstName: "",
             lastName: "",
             email: "",
-            // contact: "",
             message: "",
           }}
           validationSchema={Yup.object({
@@ -51,9 +35,6 @@ const DiscussForm = (props) => {
             email: Yup.string()
               .email("Invalid email address")
               .required("Email Required"),
-            // contact: Yup.string()
-            //   .matches(phoneRegExp, "Phone number is not valid")
-            //   .required("Contact Required"),
             message: Yup.string(),
           })}
           onSubmit={() => {
@@ -129,9 +110,6 @@ const DiscussForm = (props) => {
                   />
                 </span>
               </div>
-              {/* <ErrorMessage name="firstName" component={ErrorComponent} />
-              <ErrorMessage name="lastName" component={ErrorComponent} /> */}
-
               <label
                 htmlFor="email"
                 className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
@@ -154,30 +132,6 @@ const DiscussForm = (props) => {
                 `}
                 {...formik.getFieldProps("email")}
               />
-              {/* <ErrorMessage name="email" component={ErrorComponent} /> */}
-              {/* <label
-                htmlFor="contact"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                Contact Number
-              </label>
-              <input
-                id="contact"
-                type="tel"
-                name="contact"
-                placeholder=""
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
-                  formik.touched.contact && formik.errors.contact
-                    ? "border-red-400"
-                    : formik.touched.contact
-                    ? "border-green-400"
-                    : ""
-                }
-                `}
-                {...formik.getFieldProps("contact")}
-              /> */}
-              {/* <ErrorMessage name="contact" component={ErrorComponent} /> */}
               <label
                 htmlFor="message"
                 className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
@@ -199,7 +153,6 @@ const DiscussForm = (props) => {
                 `}
                 {...formik.getFieldProps("message")}
               />
-              {/* <ErrorMessage name="message" component={ErrorComponent} /> */}
               <input type="hidden" name="form-name" value={formName} />
 
               <button
@@ -208,9 +161,6 @@ const DiscussForm = (props) => {
               >
                 Submit
               </button>
-              {/* <p className="flex justify-between mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
-            Flamy Inc.
-          </p> */}
             </form>
           )}
         </Formik>

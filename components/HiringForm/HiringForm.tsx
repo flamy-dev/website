@@ -57,14 +57,12 @@ const HiringForm = (props) => {
             contact: Yup.string()
               .matches(phoneRegExp, "Phone number is not valid")
               .required("Contact Required"),
-            // message: Yup.string(),
             github: Yup.string().required("github url required"),
             linkedin: Yup.string().required("linkedin url required"),
             file: Yup.mixed()
               .required("CV Required")
               .test("fileSize", "File too large", (value) => {
                 console.log("value", value);
-                // console.log(value.size);
                 return value && value.size <= fileSize;
               })
               .test(
@@ -146,9 +144,6 @@ const HiringForm = (props) => {
                   />
                 </span>
               </div>
-              {/* <ErrorMessage name="firstName" component={ErrorComponent} />
-              <ErrorMessage name="lastName" component={ErrorComponent} /> */}
-
               <label
                 htmlFor="email"
                 className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
@@ -171,7 +166,6 @@ const HiringForm = (props) => {
                 `}
                 {...formik.getFieldProps("email")}
               />
-              {/* <ErrorMessage name="email" component={ErrorComponent} /> */}
               <label
                 htmlFor="contact"
                 className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
@@ -194,29 +188,6 @@ const HiringForm = (props) => {
                 `}
                 {...formik.getFieldProps("contact")}
               />
-              {/* <ErrorMessage name="contact" component={ErrorComponent} /> */}
-              {/* <label
-                htmlFor="message"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                Message
-              </label> */}
-              {/* <textarea
-                id="message"
-                name="message"
-                placeholder="message"
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
-                  formik.touched.message && formik.errors.message
-                    ? "border-red-400"
-                    : formik.touched.message
-                    ? "border-green-400"
-                    : ""
-                }
-                `}
-                {...formik.getFieldProps("message")}
-              /> */}
-              {/* <ErrorMessage name="message" component={ErrorComponent} /> */}
               <label
                 htmlFor="github"
                 className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
@@ -307,10 +278,6 @@ const HiringForm = (props) => {
               <div className="mt-6">
                 <ErrorMessage name="file" component={ErrorComponent} />
               </div>
-
-              {/* <p className="flex justify-between mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
-            Flamy Inc.
-          </p> */}
             </form>
           )}
         </Formik>

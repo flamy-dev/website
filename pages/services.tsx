@@ -40,8 +40,6 @@ class Services extends React.Component<Props, State> {
 
   onLeave(origin, destination, direction) {
     console.log("onLeave", { origin, destination, direction });
-    // arguments are mapped in order of fullpage.js callback arguments do something
-    // with the event
   }
 
   render() {

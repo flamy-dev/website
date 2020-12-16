@@ -1,11 +1,6 @@
 import "../styles/globals.css";
 
 const MyApp = ({ Component, pageProps }) => {
-  // const [isLoaderVisible, setIsLoaderVisible] = useState(true);
-  // useEffect(() => {
-  //   window.onload = () => setIsLoaderVisible(false);
-  // }, []);
-
   return (
     <>
       {/* {isLoaderVisible ? (

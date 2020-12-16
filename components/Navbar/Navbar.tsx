@@ -8,7 +8,6 @@ const Navbar = (props) => {
   const { children } = props;
   const router = useRouter();
   const [mobileMenu, setMobileMenu] = useState(false);
-  // console.log(router);
   const navLinks = [
     { text: "About", to: "/about" },
     { text: "Work", to: "/work" },
