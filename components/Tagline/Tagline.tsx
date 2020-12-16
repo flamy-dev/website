@@ -4,9 +4,10 @@ const Tagline = (props) => {
   return (
     <h1
       className={`
-      flex justify-start xl:justify-center items-center 
-      font-extrabold text-5xl tracking-wide
-      md:text-8xl w-full
+        flex justify-center xl:justify-center items-center 
+        font-extrabold text-5xl tracking-wide
+        md:text-8xl w-full
+        md:text-center
       `}
     >
       {children}
