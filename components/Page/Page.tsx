@@ -16,6 +16,10 @@ const Page = (props) => {
           rel="preload"
           as="style"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+        />
       </Head>
       <NavBar>
         <ContactButton>
