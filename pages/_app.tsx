@@ -5,12 +5,14 @@ import { ReactSVG } from "react-svg";
 const MyApp = ({ Component, pageProps }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
+  const hasLoaded = () => setIsLoaded(true);
+
   useEffect(() => {
-    if (document.readyState !== "complete")
-      document.addEventListener("DOMContentLoaded", () => {
-        setIsLoaded(true);
-      });
-    else setIsLoaded(true);
+    if (document.readyState !== "complete") {
+      document.addEventListener("DOMContentLoaded", hasLoaded);
+      window.addEventListener("load", hasLoaded);
+      document.addEventListener("load", hasLoaded);
+    } else setIsLoaded(true);
   }, []);
 
   return (
