@@ -47,7 +47,7 @@ class Services extends React.Component<Props, State> {
   render() {
     return (
       <Page title="Flamy - Services">
-        <div className="text-center">
+        <div className="text-center m-6">
           <MediaQuery minDeviceWidth={1000}>
             <ReactFullPage
               slidesNavigation={true}
