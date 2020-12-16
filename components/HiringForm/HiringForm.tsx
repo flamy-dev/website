@@ -2,9 +2,13 @@ import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef } from "react";
+
+const formName = "hiring";
 
 const HiringForm = (props) => {
   const { rightDiv } = props;
+  const formRef = useRef(null);
 
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -67,32 +71,25 @@ const HiringForm = (props) => {
                 (value) => value && supportedFormats.includes(value.type)
               ),
           })}
-          onSubmit={(values) => {
-            setTimeout(() => {
-              console.log(values);
-              alert(JSON.stringify(values, null, 2));
-            }, 400);
-
-            console.log(values);
-
-            let data = new FormData();
-            data.append("file", values.file);
-            data.append("firstName", values.firstName);
-            data.append("lastName", values.lastName);
-            data.append("email", values.email);
-            data.append("contact", values.contact);
-            data.append("linkedin", values.linkedin);
-            data.append("github", values.github);
-
-            //post the form.
+          onSubmit={() => {
+            const data = new FormData(formRef.current);
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              // @ts-ignore
+              body: new URLSearchParams(data).toString(),
+            })
+              .then(() => console.log("Form successfully submitted"))
+              .catch((error) => alert(error));
           }}
         >
           {(formik) => (
-            // @ts-ignore
             <form
               className="mt-6 md:mt-0"
               onSubmit={formik.handleSubmit}
-              // netlify
+              ref={formRef}
+              data-netlify="true"
+              name={formName}
             >
               <div className="flex justify-between gap-3">
                 <span className="w-1/2">
@@ -259,6 +256,7 @@ const HiringForm = (props) => {
                 `}
                 {...formik.getFieldProps("linkedin")}
               />
+              <input type="hidden" name="form-name" value={formName} />
               <div className="flex justify-between mt-2 gap-3">
                 <span className="w-1/2">
                   <label

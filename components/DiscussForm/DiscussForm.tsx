@@ -1,8 +1,12 @@
 import { Formik } from "formik";
+import { useRef } from "react";
 import * as Yup from "yup";
+
+const formName = "discuss-clients";
 
 const DiscussForm = (props) => {
   const { isLeftDivActive } = props;
+  const formRef = useRef();
 
   //If we need to take contact number...
 
@@ -50,21 +54,25 @@ const DiscussForm = (props) => {
             //   .required("Contact Required"),
             message: Yup.string(),
           })}
-          onSubmit={(values) => {
-            setTimeout(() => {
-              console.log(values);
-              alert(JSON.stringify(values, null, 2));
-            }, 400);
-
-            console.log(values);
+          onSubmit={() => {
+            const data = new FormData(formRef.current);
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              // @ts-ignore
+              body: new URLSearchParams(data).toString(),
+            })
+              .then(() => console.log("Form successfully submitted"))
+              .catch((error) => alert(error));
           }}
         >
           {(formik) => (
-            // @ts-ignore
             <form
               className="mt-6 md:mt-0"
               onSubmit={formik.handleSubmit}
-              // netlify
+              ref={formRef}
+              data-netlify="true"
+              name={formName}
             >
               <div className="flex justify-between gap-3">
                 <span className="w-1/2">
@@ -187,6 +195,7 @@ const DiscussForm = (props) => {
                 {...formik.getFieldProps("message")}
               />
               {/* <ErrorMessage name="message" component={ErrorComponent} /> */}
+              <input type="hidden" name="form-name" value={formName} />
 
               <button
                 type="submit"
