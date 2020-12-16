@@ -1,7 +1,7 @@
 export const workDetail = (detail) => {
   console.log(detail);
   return `
-    <div class="overflow-y-scroll min-h-screen cursor-default flex justify-center flex-col items-center p-2 w-full border-none rounded-sm text-white bg-black lg:w-work ">
+    <div class="overflow-y-scroll md:overflow-hidden overflow-x-hidden min-h-screen cursor-default flex justify-center flex-col items-center p-2 w-full border-none rounded-sm text-white bg-black lg:w-work ">
     <div class="w-full flex flex-col md:flex-row">
       <div class="flex flex-col justify-center items-center p-2 w-full md:w-1/4  m-1">
         <h2 class="text-xl md:mb-10">Brand Name</h2>
@@ -31,71 +31,69 @@ export const workDetail = (detail) => {
           Lorem ipsum
         </div>
       </div>
-      <div class="h-full flex-col m-1 flex justify-center md:justify-between items-center p-2 flex-grow md:items-stretch w-full md:w-2/4 text-justify md:text-center" style="height:100vh; min-height:100vh;">
-        Updating....
+      <div class="py-10 md:pb-0 overflow-y-scroll h-full flex-col m-1 flex justify-center md:justify-between items-center p-2 flex-grow md:items-stretch w-full md:w-2/4 text-justify md:text-center" style="height:100vh; min-height:100vh;">
+        <div class="w-full flex justify-center items-center  m-1 p-1">
+        <div class="mr-1 text-xs md:text-base md:w-auto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+          cumque minima facilis eos nesciunt illo ab maxime laborum natus,
+          nobis perspiciatis.
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <img src="insta.png" class="w-40" />
+        </div>
+        </div>
+        <div class="w-full flex justify-center items-center  m-1 p-1">
+        <div class="mr-1 text-xs md:text-base md:w-auto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+          cumque minima facilis eos nesciunt illo ab maxime laborum natus,
+          nobis perspiciatis.
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <img src="insta.png" class="w-40" />
+        </div>
+        </div>
+        <div class="w-full flex justify-center items-center  m-1 p-1">
+        <div class="mr-1 text-xs md:text-base md:w-auto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+          cumque minima facilis eos nesciunt illo ab maxime laborum natus,
+          nobis perspiciatis.
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <img src="insta.png" class="w-40" />
+        </div>
+        </div>
+        <div class="w-full flex justify-center items-center  m-1 p-1">
+        <div class="mr-1 text-xs md:text-base md:w-auto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+          cumque minima facilis eos nesciunt illo ab maxime laborum natus,
+          nobis perspiciatis.
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <img src="insta.png" class="w-40" />
+        </div>
+        </div>
+        <div class="w-full flex justify-center items-center  m-1 p-1">
+        <div class="mr-1 text-xs md:text-base md:w-auto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+          cumque minima facilis eos nesciunt illo ab maxime laborum natus,
+          nobis perspiciatis.
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <img src="insta.png" class="w-40" />
+        </div>
+        </div>
+        <div class="w-full flex justify-center items-center  m-1 p-1">
+        <div class="mr-1 text-xs md:text-base md:w-auto">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
+          cumque minima facilis eos nesciunt illo ab maxime laborum natus,
+          nobis perspiciatis.
+        </div>
+        <div class="w-full flex justify-center items-center">
+          <img src="insta.png" class="w-40" />
+        </div>
+        </div>
       </div>
     </div>
     </div>
   `;
 };
-
-// <div class="w-full flex justify-center items-center  m-1 p-1">
-//   <div class="mr-1 text-xs md:text-base md:w-auto">
-//     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-//     cumque minima facilis eos nesciunt illo ab maxime laborum natus,
-//     nobis perspiciatis.
-//   </div>
-//   <div class="w-full flex justify-center items-center">
-//     <img src="insta.png" class="w-40" />
-//   </div>
-// </div>
-// <div class="w-full flex justify-center items-center  m-1 p-1">
-//   <div class="mr-1 text-xs md:text-base md:w-auto">
-//     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-//     cumque minima facilis eos nesciunt illo ab maxime laborum natus,
-//     nobis perspiciatis.
-//   </div>
-//   <div class="w-full flex justify-center items-center">
-//     <img src="insta.png" class="w-40" />
-//   </div>
-// </div>
-// <div class="w-full flex justify-center items-center  m-1 p-1">
-//   <div class="mr-1 text-xs md:text-base md:w-auto">
-//     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-//     cumque minima facilis eos nesciunt illo ab maxime laborum natus,
-//     nobis perspiciatis.
-//   </div>
-//   <div class="w-full flex justify-center items-center">
-//     <img src="insta.png" class="w-40" />
-//   </div>
-// </div>
-// <div class="w-full flex justify-center items-center  m-1 p-1">
-//   <div class="mr-1 text-xs md:text-base md:w-auto">
-//     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-//     cumque minima facilis eos nesciunt illo ab maxime laborum natus,
-//     nobis perspiciatis.
-//   </div>
-//   <div class="w-full flex justify-center items-center">
-//     <img src="insta.png" class="w-40" />
-//   </div>
-// </div>
-// <div class="w-full flex justify-center items-center  m-1 p-1">
-//   <div class="mr-1 text-xs md:text-base md:w-auto">
-//     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-//     cumque minima facilis eos nesciunt illo ab maxime laborum natus,
-//     nobis perspiciatis.
-//   </div>
-//   <div class="w-full flex justify-center items-center">
-//     <img src="insta.png" class="w-40" />
-//   </div>
-// </div>
-// <div class="w-full flex justify-center items-center  m-1 p-1">
-//   <div class="mr-1 text-xs md:text-base md:w-auto">
-//     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-//     cumque minima facilis eos nesciunt illo ab maxime laborum natus,
-//     nobis perspiciatis.
-//   </div>
-//   <div class="w-full flex justify-center items-center">
-//     <img src="insta.png" class="w-40" />
-//   </div>
-// </div>

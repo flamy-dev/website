@@ -12,6 +12,40 @@ body {
   background-attachment: fixed;
 }
 
+/* scrollbar  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(182, 25, 0);
+  background: linear-gradient(
+    49deg,
+    rgba(182, 25, 0, 1) 0%,
+    rgba(0, 63, 136, 1) 100%
+  );
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(182, 25, 0);
+  background: linear-gradient(
+    49deg,
+    rgb(161, 23, 2) 0%,
+    rgb(1, 56, 119) 100%
+  );
+}
+
+/* general  */
+
 a {
   color: inherit;
   text-decoration: none;
@@ -30,6 +64,8 @@ a {
 .z-top {
   z-index: 100000;
 }
+
+/* modal  */
 
 .modal-1-content {
   /* height: 20%; */
@@ -68,6 +104,8 @@ a {
   clip-path: polygon(0 0, 0 75%, 10% 75%, 15% 100%, 20% 75%, 100% 75%, 100% 0);
   border-radius: 40px;
 }
+
+/* background on welcome page  */
 
 #about-hero:before {
   content: "";

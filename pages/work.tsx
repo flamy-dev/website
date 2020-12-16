@@ -37,8 +37,10 @@ const Work = () => {
         element.style.width = to.width;
         element.style.height = to.height;
         element.style.zIndex = to.zIndex ? to.zIndex : "";
-        element.style.oveflow = "scroll";
-        element.style.minHeight = to.height === "100vh" ? "100vh" : "";
+        element.style.overflow = "scroll";
+        element.style.overflowX = "hidden";
+
+        // element.style.minHeight = to.height === "100vh" ? "100vh" : "";
       });
       setTimeout(res, duration);
     });
@@ -169,12 +171,17 @@ const Work = () => {
           </div>
 
           <button
-            className={`btn top-10 md:right-10 border-2 focus:outline-none ${
-              !showButton ? "hidden" : "text-white border-white"
-            }`}
+            className={`btn h-10 w-10 top-10 right-5 lg:right-10 border-none focus:outline-none ${
+              !showButton && "hidden"
+            }
+              bg-work
+              rounded-full
+              font-extrabold
+              transition-all
+            `}
             onClick={removeFromDom}
           >
-            Close
+            X
           </button>
         </div>
       </div>
