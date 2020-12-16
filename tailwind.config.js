@@ -21,6 +21,8 @@ module.exports = {
         about:
           "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/logo-f.svg'))",
         chatbot: "url('/chatbot.svg')",
+        work:
+          "linear-gradient(49deg,rgba(182, 25, 0, 1) 0%,rgba(0, 63, 136, 1) 100%)",
       }),
       backgroundSize: {
         30: "30%",
