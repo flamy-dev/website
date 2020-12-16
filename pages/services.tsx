@@ -6,10 +6,6 @@ import Headings from "../components/Headings/Headings";
 import { services } from "../data/services";
 import MediaQuery from "react-responsive";
 
-interface Props {}
-
-interface State {}
-
 const Slides = ({ className, showIntro = true }) => {
   return (
     <>
@@ -33,47 +29,33 @@ const Slides = ({ className, showIntro = true }) => {
   );
 };
 
-class Services extends React.Component<Props, State> {
-  constructor(props) {
-    super(props);
-  }
-
-  onLeave(origin, destination, direction) {
-    console.log("onLeave", { origin, destination, direction });
-  }
-
-  render() {
-    return (
-      <Page title="Flamy - Services">
-        <div className="text-center m-6">
-          <MediaQuery minDeviceWidth={1000}>
-            <ReactFullPage
-              slidesNavigation={true}
-              onLeave={this.onLeave.bind(this)}
-              render={(_) => (
-                <ReactFullPage.Wrapper>
-                  <div className="section">
-                    <Slides className="slide" showIntro={false} />
-                  </div>
-                </ReactFullPage.Wrapper>
-              )}
-            />
-          </MediaQuery>
-          <MediaQuery maxDeviceWidth={1000}>
-            <ReactFullPage
-              navigation={true}
-              onLeave={this.onLeave.bind(this)}
-              render={(_) => (
-                <ReactFullPage.Wrapper>
-                  <Slides className="section" />
-                </ReactFullPage.Wrapper>
-              )}
-            />
-          </MediaQuery>
-        </div>
-      </Page>
-    );
-  }
-}
+const Services = () => (
+  <Page title="Flamy - Services">
+    <div className="text-center m-6">
+      <MediaQuery minDeviceWidth={1000}>
+        <ReactFullPage
+          slidesNavigation={true}
+          render={(_) => (
+            <ReactFullPage.Wrapper>
+              <div className="section">
+                <Slides className="slide" showIntro={false} />
+              </div>
+            </ReactFullPage.Wrapper>
+          )}
+        />
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={1000}>
+        <ReactFullPage
+          navigation={true}
+          render={(_) => (
+            <ReactFullPage.Wrapper>
+              <Slides className="section" />
+            </ReactFullPage.Wrapper>
+          )}
+        />
+      </MediaQuery>
+    </div>
+  </Page>
+);
 
 export default Services;
