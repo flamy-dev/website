@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
-        helvetica: ["Helvetica", "sans-serif"],
+        // helvetica: ["Helvetica", "sans-serif"],
       },
       backgroundImage: (theme) => ({
         underline: "url('/underline.svg')",
