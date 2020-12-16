@@ -12,7 +12,7 @@ const Welcome = (props) => {
   }
 
   return (
-    <div className="z-10">
+    <div className="z-10 flex justify-center items-center flex-col">
       <Tagline>{tagline}</Tagline>
       <div className="mt-8 md:mt-20 z-20">
         <ContactButton>
