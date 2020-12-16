@@ -10,7 +10,7 @@ export default class CustomDocument extends Document {
       <Html>
         <Head>
           <meta property="custom" content="flamy" />
-          {/* <link href="/fonts/style.css" rel="stylesheet" /> */}
+          <link href="/fonts/style.css" rel="stylesheet" />
         </Head>
         <body className="dark ">
           <Main />
