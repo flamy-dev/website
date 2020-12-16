@@ -109,7 +109,21 @@ a {
   }
 }
 
-/* box shadow */
+/* FullPage Scroll */
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white !important;
+}
+
+.fp-controlArrow.fp-prev {
+  left: 40px !important;
+  border-width: 18.5px 14px 18.5px 0 !important;
+}
+.fp-controlArrow.fp-next {
+  right: 40px !important;
+  border-width: 18.5px 0 18.5px 14px !important;
+}
 
 /* .box-shadow {
   box-shadow: 0 0 10px #1E3A8A, 0 0 40px #1E3A8A, 0 0 80px #1E3A8A;
