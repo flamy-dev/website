@@ -1,6 +1,8 @@
 import { Formik } from "formik";
 import { useRef } from "react";
 import * as Yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const formName = "discuss-clients";
 
@@ -62,8 +64,11 @@ const DiscussForm = (props) => {
               // @ts-ignore
               body: new URLSearchParams(data).toString(),
             })
-              .then(() => console.log("Form successfully submitted"))
-              .catch((error) => alert(error));
+              .then(() => toast.success("Form successfully submitted."))
+              .catch((error) => {
+                toast.error("An error occured. Please try again.");
+                console.log(error);
+              });
           }}
         >
           {(formik) => (
@@ -210,6 +215,7 @@ const DiscussForm = (props) => {
           )}
         </Formik>
       </div>
+      <ToastContainer position="bottom-right" />
     </div>
   );
 };
