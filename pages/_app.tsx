@@ -6,9 +6,11 @@ const MyApp = ({ Component, pageProps }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", () => {
-      setIsLoaded(true);
-    });
+    if (document.readyState !== "complete")
+      document.addEventListener("DOMContentLoaded", () => {
+        setIsLoaded(true);
+      });
+    else setIsLoaded(true);
   }, []);
 
   return (
