@@ -3,6 +3,8 @@ import * as Yup from "yup";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const formName = "hiring";
 
@@ -79,8 +81,11 @@ const HiringForm = (props) => {
               // @ts-ignore
               body: new URLSearchParams(data).toString(),
             })
-              .then(() => console.log("Form successfully submitted"))
-              .catch((error) => alert(error));
+              .then(() => toast.success("Form successfully submitted."))
+              .catch((error) => {
+                toast.error("An error occured. Please try again.");
+                console.log(error);
+              });
           }}
         >
           {(formik) => (
@@ -310,6 +315,7 @@ const HiringForm = (props) => {
           )}
         </Formik>
       </div>
+      <ToastContainer position="bottom-right" />
     </div>
   );
 };
