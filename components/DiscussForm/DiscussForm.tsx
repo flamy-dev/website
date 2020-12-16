@@ -1,31 +1,30 @@
-import { Formik, ErrorMessage } from "formik";
+import { Formik } from "formik";
 import * as Yup from "yup";
-import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const HiringForm = (props) => {
-  const { rightDiv } = props;
+const DiscussForm = (props) => {
+  const { isLeftDivActive } = props;
 
-  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+  //If we need to take contact number...
 
-  const supportedFormats = ["application/pdf"];
+  // const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-  const fileSize = 1024 * 1024 * 10; //10mb
+  //If we need Error to be displayed instead of highlighting border...
 
-  const ErrorComponent = (props) => {
-    console.log(props);
-    return (
-      <div className="pt-4 text-red-700 text-base flex justify-start items-center h-2 w-full pl-2">
-        {props.children}
-      </div>
-    );
-  };
+  // const ErrorComponent = (props) => {
+  //   console.log(props);
+  //   return (
+  //     <div className="pt-4 text-red-700 text-base flex justify-center items-center h-2 w-full">
+  //       {props.children}
+  //     </div>
+  //   );
+  // };
 
   return (
     <div className="my-8 lg:my-0 grid h-full w-full sm:place-items-start lg:place-items-center">
       <div
         className={`w-full p-2 bg-white
-        ${rightDiv ? "md:w-full lg:w-3/5 xl:w-2/5" : "lg:w-full"}
+        ${isLeftDivActive ? "md:w-full lg:w-3/5 xl:w-2/5" : "lg:w-3/5"}
+
       `}
       >
         <Formik
@@ -33,10 +32,8 @@ const HiringForm = (props) => {
             firstName: "",
             lastName: "",
             email: "",
-            contact: "",
-            github: "",
-            linkedin: "",
-            file: null,
+            // contact: "",
+            message: "",
           }}
           validationSchema={Yup.object({
             firstName: Yup.string()
@@ -48,24 +45,10 @@ const HiringForm = (props) => {
             email: Yup.string()
               .email("Invalid email address")
               .required("Email Required"),
-            contact: Yup.string()
-              .matches(phoneRegExp, "Phone number is not valid")
-              .required("Contact Required"),
-            // message: Yup.string(),
-            github: Yup.string().required("github url required"),
-            linkedin: Yup.string().required("linkedin url required"),
-            file: Yup.mixed()
-              .required("CV Required")
-              .test("fileSize", "File too large", (value) => {
-                console.log("value", value);
-                // console.log(value.size);
-                return value && value.size <= fileSize;
-              })
-              .test(
-                "fileFormat",
-                "Unsupported Format",
-                (value) => value && supportedFormats.includes(value.type)
-              ),
+            // contact: Yup.string()
+            //   .matches(phoneRegExp, "Phone number is not valid")
+            //   .required("Contact Required"),
+            message: Yup.string(),
           })}
           onSubmit={(values) => {
             setTimeout(() => {
@@ -74,17 +57,6 @@ const HiringForm = (props) => {
             }, 400);
 
             console.log(values);
-
-            let data = new FormData();
-            data.append("file", values.file);
-            data.append("firstName", values.firstName);
-            data.append("lastName", values.lastName);
-            data.append("email", values.email);
-            data.append("contact", values.contact);
-            data.append("linkedin", values.linkedin);
-            data.append("github", values.github);
-
-            //post the form.
           }}
         >
           {(formik) => (
@@ -170,7 +142,7 @@ const HiringForm = (props) => {
                 {...formik.getFieldProps("email")}
               />
               {/* <ErrorMessage name="email" component={ErrorComponent} /> */}
-              <label
+              {/* <label
                 htmlFor="contact"
                 className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
               >
@@ -180,7 +152,7 @@ const HiringForm = (props) => {
                 id="contact"
                 type="tel"
                 name="contact"
-                placeholder="900-490-2389"
+                placeholder=""
                 className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
                 ${
                   formik.touched.contact && formik.errors.contact
@@ -191,15 +163,15 @@ const HiringForm = (props) => {
                 }
                 `}
                 {...formik.getFieldProps("contact")}
-              />
+              /> */}
               {/* <ErrorMessage name="contact" component={ErrorComponent} /> */}
-              {/* <label
+              <label
                 htmlFor="message"
                 className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
               >
                 Message
-              </label> */}
-              {/* <textarea
+              </label>
+              <textarea
                 id="message"
                 name="message"
                 placeholder="message"
@@ -213,98 +185,15 @@ const HiringForm = (props) => {
                 }
                 `}
                 {...formik.getFieldProps("message")}
-              /> */}
+              />
               {/* <ErrorMessage name="message" component={ErrorComponent} /> */}
-              <label
-                htmlFor="github"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                Github Url
-              </label>
-              <input
-                id="github"
-                type="text"
-                name="github"
-                placeholder="https://github.com/flamy-dev"
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
-                  formik.touched.github && formik.errors.github
-                    ? "border-red-400"
-                    : formik.touched.github
-                    ? "border-green-400"
-                    : ""
-                }
-                `}
-                {...formik.getFieldProps("github")}
-              />
-              <label
-                htmlFor="linkedin"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                Linkedin Url
-              </label>
-              <input
-                id="linkedin"
-                type="text"
-                name="linkedin"
-                placeholder="https://www.linkedin.com/company/flamy-dev/"
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
-                  formik.touched.linkedin && formik.errors.linkedin
-                    ? "border-red-400"
-                    : formik.touched.linkedin
-                    ? "border-green-400"
-                    : ""
-                }
-                `}
-                {...formik.getFieldProps("linkedin")}
-              />
-              <div className="flex justify-between mt-2 gap-3">
-                <span className="w-1/2">
-                  <label
-                    htmlFor="file"
-                    className={`flex justify-center items-center border-2 py-2 mt-6 text-gray-600 hover:border-gray-500 uppercase cursor-pointer h-full
-                    ${
-                      formik.touched.file && formik.errors.file
-                        ? "border-red-400"
-                        : formik.touched.file
-                        ? "border-green-400"
-                        : ""
-                    }
-                    `}
-                  >
-                    <FontAwesomeIcon icon={faPaperclip} className="text-2xl" />{" "}
-                    &nbsp;
-                    {formik.touched.file && formik.errors.file
-                      ? "Attach CV"
-                      : formik.touched.file
-                      ? "CV Attached!"
-                      : "Attach CV"}
-                  </label>
-                  <input
-                    id="file"
-                    type="file"
-                    name="file"
-                    placeholder="file"
-                    className="hidden w-full border-2 text-gray-700 appearance-none focus:outline-none cursor-pointer"
-                    onChange={(e) => {
-                      formik.setFieldValue("file", e.target.files[0]);
-                    }}
-                  />
-                </span>
-                <span className="w-1/2">
-                  <button
-                    type="submit"
-                    className="h-full w-full mt-6 font-medium tracking-widest uppercase text-blue-600 hover:text-blue-800 border-gray-100 border-2 hover:border-blue-500 focus:outline-none"
-                  >
-                    Submit
-                  </button>
-                </span>
-              </div>
-              <div className="mt-6">
-                <ErrorMessage name="file" component={ErrorComponent} />
-              </div>
 
+              <button
+                type="submit"
+                className="h-full w-full mt-6 font-medium tracking-widest uppercase text-blue-600 hover:text-blue-800 border-gray-100 border-2 hover:border-blue-500 focus:outline-none"
+              >
+                Submit
+              </button>
               {/* <p className="flex justify-between mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
             Flamy Inc.
           </p> */}
@@ -316,4 +205,4 @@ const HiringForm = (props) => {
   );
 };
 
-export default HiringForm;
+export default DiscussForm;

@@ -1,15 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DiscussForm from "../DiscussForm/DiscussForm";
 
 const ContactDetails = (props) => {
-  const { contactus } = props;
+  const { contactus, isLeftDivActive } = props;
 
   return (
-    <div className="flex justify-center items-center w-full py-4">
-      <div className="flex flex-col justify-center mt-2 ml-8">
+    <div className="flex flex-col justify-center items-center w-full py-4">
+      <div className="flex flex-wrap justify-center mb-2">
         {contactus.map((contact) => (
           <div
             key={contact.name}
-            className="mt-4 h-8 text-blue-600 hover:text-blue-900"
+            className="mt-2 mx-3 h-8 text-blue-600 hover:text-blue-900"
           >
             <a
               href={contact.url}
@@ -17,11 +18,11 @@ const ContactDetails = (props) => {
               target="_blank"
             >
               <FontAwesomeIcon icon={contact.icon} size="lg" />
-              <span className="ml-12">{contact.value} </span>
             </a>
           </div>
         ))}
       </div>
+      <DiscussForm isLeftDivActive={isLeftDivActive} />
     </div>
   );
 };
