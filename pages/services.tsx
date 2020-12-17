@@ -30,7 +30,11 @@ const Slides = ({ className, showIntro = true }) => {
 };
 
 const Services = () => (
-  <Page title="Flamy - Services">
+  <Page
+    title="Flamy - Services"
+    description="At Flamy we offer services that serves your technology needs."
+    currentURL="https://www.flamy.dev/services"
+  >
     <div className="text-center m-6">
       <MediaQuery minDeviceWidth={1000}>
         <ReactFullPage

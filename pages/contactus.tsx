@@ -11,7 +11,11 @@ const ContactUs = (props) => {
   const [isLeftDivActive, setIsLeftDivActive] = useState(active ? false : true);
 
   return (
-    <Page title="Flamy - Contact Us">
+    <Page
+      title="Flamy - Contact Us"
+      description="Reach out to us for discussing a project or to work with us!"
+      currentURL="https://www.flamy.dev/contactus"
+    >
       <FullPageDiv noPadding={true}>
         <div className="mt-32 sm:mt-36 flex-col md:flex-row  h-full w-full flex justify-between items-stretch">
           <div

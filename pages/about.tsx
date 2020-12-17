@@ -16,7 +16,11 @@ const About = () => {
   const [showModal] = useState(false);
 
   return (
-    <Page title="Flamy - About">
+    <Page
+      title="Flamy - About"
+      description="We will build your digital future."
+      currentURL="https://www.flamy.dev/"
+    >
       <div className="text-white w-full h-full">
         <MediaQuery minDeviceWidth={1000}>
           <ReactFullPage
@@ -41,6 +45,7 @@ const About = () => {
                     <img
                       src="/logo.svg"
                       className="hidden md:block h-auto w-4/12 lg:w-2/12 lg:px-10"
+                      alt="Flamy Full Logo"
                     />
                     <AboutFlamyElement
                       description={constants.logo.phoenix_meaning}
