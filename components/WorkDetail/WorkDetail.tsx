@@ -31,7 +31,7 @@ const WorkDetail = (props) => {
             href={details.link}
             className="block text-bold text-2xl text-blue-500 animated-link cursor-pointer hover:text-blue-300"
             target="_blank"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
             aria-label={details.name}
           >
             Visit
