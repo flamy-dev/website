@@ -4,6 +4,7 @@ import clients from "../data/clients";
 import Rodal from "rodal";
 import WorkDetail from "../components/WorkDetail/WorkDetail";
 import "rodal/lib/rodal.css";
+import LazyImg from "../components/LazyImg";
 
 interface Client {
   logoPath: string;
@@ -42,7 +43,7 @@ const Work = () => {
                 }}
               >
                 <div className="content">
-                  <img
+                  <LazyImg
                     src={client.logoPath}
                     alt={client.name}
                     className={`md:w-80 ${

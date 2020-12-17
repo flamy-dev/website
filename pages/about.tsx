@@ -11,6 +11,7 @@ import clients from "../data/clients";
 import MediaQuery from "react-responsive";
 import AboutFlamyElement from "../components/AboutFlamyElement/AboutFlamyElement";
 import AboutCarousel from "../components/AboutCarousel/AboutCarousel";
+import LazyImg from "../components/LazyImg";
 
 const About = () => {
   const [showModal] = useState(false);
@@ -42,7 +43,7 @@ const About = () => {
                       description={constants.logo.f_meaning}
                       logo="/logo-f.svg"
                     />
-                    <img
+                    <LazyImg
                       src="/logo.svg"
                       className="hidden md:block h-auto w-4/12 lg:w-2/12 lg:px-10"
                       alt="Flamy Full Logo"

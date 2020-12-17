@@ -1,4 +1,5 @@
 import _ from "lodash";
+import LazyImg from "../LazyImg";
 
 const OurClients = (props) => {
   const { clients } = props;
@@ -21,7 +22,7 @@ const OurClients = (props) => {
                 aria-label={name}
                 rel="noopener"
               >
-                <img
+                <LazyImg
                   src={logoPath}
                   className={`w-20 m-5 ml-1 md:m-5 md:w-32 grayscale transition-all ${
                     needBg ? "bg-white p-2 " : ""

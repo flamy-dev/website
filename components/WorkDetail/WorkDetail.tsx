@@ -1,3 +1,5 @@
+import LazyImg from "../LazyImg";
+
 const WorkDetail = (props) => {
   const { details } = props;
 
@@ -8,13 +10,13 @@ const WorkDetail = (props) => {
           <h2 className="text-xl md:mb-10">Brand Name</h2>
 
           <div className="flex jusify-center items-center  relative ">
-            <img
+            <LazyImg
               src="logo.svg"
               className="w-full h-full opacity-50"
               alt="background for logo"
             />
             <div className="rounded-full">
-              <img
+              <LazyImg
                 src={details?.logoPath}
                 alt="client logo"
                 className="absolute w-36 p-4 clientLogo overflow-y-scroll"
@@ -43,7 +45,7 @@ const WorkDetail = (props) => {
               cumque minima facilis eos nesciunt.
             </div>
             <div className="w-full flex justify-center items-center">
-              <img
+              <LazyImg
                 src="adidas.png"
                 className="w-40 md:w-3/5 lg:w-80"
                 alt="adidas logo"

@@ -2,6 +2,7 @@ import ContactButton from "../ContactButton/ContactButton";
 import Tagline from "../Tagline/Tagline";
 import ReactModal from "react-modal";
 import Link from "next/link";
+import LazyImg from "../LazyImg";
 const Welcome = (props) => {
   const { tagline } = props;
   const { showModal, setShowModal } = props;
@@ -32,7 +33,7 @@ const Welcome = (props) => {
         overlayClassName="modal-overlay"
         className="modal-1-content"
       >
-        <img src="/bot.svg" alt="bot" />
+        <LazyImg src="/bot.svg" alt="bot" />
       </ReactModal>
       <ReactModal
         isOpen={showModal}
