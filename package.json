@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build; next export",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "check-prettier": "prettier --check .",
     "prettify": "prettier --write .",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.165",
+    "next-sitemap": "^1.3.16",
     "prettier": "^2.2.1"
   }
 }
