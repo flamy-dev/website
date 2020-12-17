@@ -38,7 +38,7 @@ const Work = () => {
                   client.row ? `row-span-${client.row}` : ""
                 } ${client.col ? `col-span-${client.col}` : ""}`}
                 onClick={() => {
-                  setDetails(<WorkDetail />);
+                  setDetails(<WorkDetail details={client} />);
                   setIsVisible(true);
                 }}
               >
@@ -59,7 +59,10 @@ const Work = () => {
 
         <Rodal
           visible={isVisible}
-          onClose={() => setIsVisible(false)}
+          onClose={() => {
+            setIsVisible(false);
+            setDetails(null);
+          }}
           className="w-screen h-screen overflow-scroll bg-transparent"
           width="100vw"
           height="vh"
