@@ -13,14 +13,26 @@ import AboutFlamyElement from "../components/AboutFlamyElement/AboutFlamyElement
 import AboutCarousel from "../components/AboutCarousel/AboutCarousel";
 import LazyImg from "../components/LazyImg";
 
-const About = () => {
+const About = (props) => {
   const [showModal] = useState(false);
 
   return (
     <Page
-      title="Flamy - About"
-      description="We will build your digital future."
-      currentURL="https://www.flamy.dev/"
+      title={
+        props.fromHome
+          ? "Flamy - Development and Design Studio"
+          : "Flamy - About"
+      }
+      description={
+        props.fromHome
+          ? "We are a highly determined team of experts that use cutting-edge technology to provide the best design and IT development solutions to our clients."
+          : "We will build your digital future."
+      }
+      currentURL={
+        props.fromHome
+          ? "https://www.flamy.dev/"
+          : "https://www.flamy.dev/about"
+      }
     >
       <div className="text-white w-full h-full">
         <MediaQuery minDeviceWidth={1000}>
