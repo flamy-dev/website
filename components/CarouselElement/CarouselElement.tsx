@@ -27,9 +27,9 @@ const CarouselElement = (props: CarouselData) => {
           </div>
         )}
         <div className="flex flex-col justify-center items-center pb-8 md:py-10 md:w-3/5 mt-4">
-          <h3 className="font-extrabold text-center text-3xl md:text-5xl mb-2 md:mb-8 px-2">
+          <h2 className="font-extrabold text-center text-3xl md:text-5xl mb-2 md:mb-8 px-2">
             {heading}
-          </h3>
+          </h2>
           <p
             className={`text-sm p-2 md:p-1  md:m-0 text-center md:text-lg lg:text-2xl w-full shadow-2xl text-gray-200 ${
               fromServices ? "box-shadow-services " : ""

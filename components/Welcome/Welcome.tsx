@@ -32,7 +32,7 @@ const Welcome = (props) => {
         overlayClassName="modal-overlay"
         className="modal-1-content"
       >
-        <img src="/bot.svg" />
+        <img src="/bot.svg" alt="bot" />
       </ReactModal>
       <ReactModal
         isOpen={showModal}

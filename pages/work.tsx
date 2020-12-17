@@ -11,6 +11,7 @@ interface Client {
   row?: number;
   col?: number;
   needBg?: boolean;
+  name: string;
 }
 
 const Work = () => {
@@ -18,7 +19,11 @@ const Work = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <Page title="Flamy - Work">
+    <Page
+      title="Flamy - Work"
+      description="Explore our previous work!"
+      currentURL="https://www.flamy.dev/work"
+    >
       <div className="w-screen flex justify-center items-center">
         <div className="pt-40 h-full w-full lg:w-1000 flex justify-center items-center flex-col px-2 text-white mb-10">
           <h1 className="text-5xl mb-4">
@@ -39,7 +44,7 @@ const Work = () => {
                 <div className="content">
                   <img
                     src={client.logoPath}
-                    alt="client"
+                    alt={client.name}
                     className={`md:w-80 ${
                       client.needBg ? "group-hover:bg-white p-2" : ""
                     }`}

@@ -8,7 +8,11 @@ const WorkDetail = (props) => {
           <h2 className="text-xl md:mb-10">Brand Name</h2>
 
           <div className="flex jusify-center items-center  relative ">
-            <img src="logo.svg" className="w-full h-full opacity-50" />
+            <img
+              src="logo.svg"
+              className="w-full h-full opacity-50"
+              alt="background for logo"
+            />
             <div className="rounded-full">
               <img
                 src={details?.logoPath}
@@ -39,7 +43,11 @@ const WorkDetail = (props) => {
               cumque minima facilis eos nesciunt.
             </div>
             <div className="w-full flex justify-center items-center">
-              <img src="adidas.png" className="w-40 md:w-3/5 lg:w-80" />
+              <img
+                src="adidas.png"
+                className="w-40 md:w-3/5 lg:w-80"
+                alt="adidas logo"
+              />
             </div>
           </div>
         </div>

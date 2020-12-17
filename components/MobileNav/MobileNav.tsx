@@ -27,7 +27,7 @@ const MobileNav = (props) => {
                 <img
                   className="h-10 w-auto"
                   src="/logo-text.svg"
-                  alt="Workflow"
+                  alt="flamy logo"
                 />
               </div>
               <div className="-mr-2">

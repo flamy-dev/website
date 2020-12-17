@@ -13,13 +13,20 @@ const OurClients = (props) => {
       <div className="flex flex-col flex-wrap items-center justify-center lg:justify-between w-full md:w-client">
         {_.chunk(clients, chunkSize).map((clientChunk, idx) => (
           <div className="flex flex-row items-center" key={idx}>
-            {clientChunk.map(({ link, logoPath, needBg }) => (
-              <a href={link} target="_blank" key={logoPath}>
+            {clientChunk.map(({ link, logoPath, needBg, name }) => (
+              <a
+                href={link}
+                target="_blank"
+                key={logoPath}
+                aria-label={name}
+                rel="noopener"
+              >
                 <img
                   src={logoPath}
                   className={`w-20 m-5 ml-1 md:m-5 md:w-32 grayscale transition-all ${
                     needBg ? "bg-white p-2 " : ""
                   }`}
+                  alt={name}
                 />
               </a>
             ))}
