@@ -14,7 +14,7 @@ const ContactUs = (props) => {
     <Page
       title="Flamy - Contact Us"
       description="Reach out to us for discussing a project or to work with us!"
-      currentURL="https://www.flamy.dev/contactus"
+      currentURL="https://www.flamy.dev/contact"
     >
       <FullPageDiv noPadding={true}>
         <div className="mt-32 sm:mt-36 flex-col md:flex-row  h-full w-full flex justify-between items-stretch">
