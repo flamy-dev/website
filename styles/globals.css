@@ -375,4 +375,11 @@ a {
   animation-iteration-count: infinite;
 }
 
+@media only screen and (max-width: 990px) {
+  .wrapper svg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 @tailwind utilities;
