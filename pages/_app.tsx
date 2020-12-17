@@ -19,8 +19,12 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       {isLoaded ? null : (
-        <div className="flex fixed h-screen w-screen justify-center items-center bg-gray-500 z-50">
-          <ReactSVG src="./logo.svg" renumerateIRIElements={false} />
+        <div className="flex fixed h-screen w-screen justify-center items-center bg-black z-top">
+          <ReactSVG
+            src="./logo.svg"
+            renumerateIRIElements={false}
+            className="wrapper"
+          />
         </div>
       )}
       <Component {...pageProps} />
