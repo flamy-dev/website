@@ -1,3 +1,5 @@
+import LazyImg from "../LazyImg";
+
 const ContactButton = (props) => {
   const { children, setShowModal } = props;
 
@@ -10,7 +12,7 @@ const ContactButton = (props) => {
         {children}
       </button>
       <div>
-        <img src="/btn.svg" alt="button" />
+        <LazyImg src="/btn.svg" alt="button" />
       </div>
     </div>
   );

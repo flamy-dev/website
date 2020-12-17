@@ -3652,6 +3652,11 @@ klona@^2.0.4:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
 
+lazysizes@^5.3.0-beta1:
+  version "5.3.0-beta1"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.3.0-beta1.tgz#a2fa48145b28f8cf54df5d20aa8a47b63fa35641"
+  integrity sha512-4ZEoV4UXvz5L96XBuaFphGlq8BVi78kIA4kL3ls2qSYMEgGBdXMgsh8u+bTVjbdwbXfzXtWc71OH4EfEEPVZoA==
+
 line-column@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/line-column/-/line-column-1.0.2.tgz#d25af2936b6f4849172b312e4792d1d987bc34a2"

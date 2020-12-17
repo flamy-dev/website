@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import { ReactSVG } from "react-svg";
+import 'lazysizes';
 
 const MyApp = ({ Component, pageProps }) => {
   const [isLoaded, setIsLoaded] = useState(false);

@@ -6,6 +6,7 @@ import {
   faCode,
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
+import LazyImg from "../LazyImg";
 
 const MobileNav = (props) => {
   const { mobileMenu, setMobileMenu } = props;
@@ -24,7 +25,7 @@ const MobileNav = (props) => {
           <div className="pt-5 pb-6 px-5 space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <img
+                <LazyImg
                   className="h-10 w-auto"
                   src="/logo-text.svg"
                   alt="flamy logo"

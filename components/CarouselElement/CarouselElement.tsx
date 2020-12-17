@@ -1,3 +1,5 @@
+import LazyImg from "../LazyImg";
+
 interface CarouselData {
   path: string;
   description: string;
@@ -23,7 +25,7 @@ const CarouselElement = (props: CarouselData) => {
       >
         {isRight ? null : (
           <div className="w-7/12 md:pr-10 lg:w-4/12 flex justify-center items-center">
-            <img src={path} alt={heading} className="h-full w-full" />
+            <LazyImg src={path} alt={heading} className="h-full w-full" />
           </div>
         )}
         <div className="flex flex-col justify-center items-center pb-8 md:py-10 md:w-3/5 mt-4">
@@ -40,7 +42,7 @@ const CarouselElement = (props: CarouselData) => {
         </div>
         {isRight && (
           <div className="md:pl-10 lg:w-2/5">
-            <img src={path} alt={heading} className="h-full w-full" />
+            <LazyImg src={path} alt={heading} className="h-full w-full" />
           </div>
         )}
       </div>
