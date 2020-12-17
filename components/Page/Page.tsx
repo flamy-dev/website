@@ -50,7 +50,7 @@ const Page = (props) => {
       </Head>
       <NavBar>
         <ContactButton>
-          <Link href="/contactus">
+          <Link href="/contact">
             <a>Contact Us</a>
           </Link>
         </ContactButton>

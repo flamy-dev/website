@@ -15,7 +15,7 @@ const MobileNav = (props) => {
     { text: "about", to: "/about", icon: faHome },
     { text: "work", to: "/work", icon: faGlobe },
     { text: "services", to: "/services", icon: faCode },
-    { text: "contact us", to: "/contactus", icon: faPhoneSquareAlt },
+    { text: "contact us", to: "/contact", icon: faPhoneSquareAlt },
   ];
 
   return (

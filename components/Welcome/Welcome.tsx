@@ -17,7 +17,7 @@ const Welcome = (props) => {
       <Tagline>{tagline}</Tagline>
       <div className="mt-8 md:mt-20 z-20">
         <ContactButton>
-          <Link href="/contactus">
+          <Link href="/contact">
             <a>Get in touch</a>
           </Link>
         </ContactButton>
@@ -55,12 +55,12 @@ const Welcome = (props) => {
                 <br></br>How can we help you today?
               </p>
               <div className=" flex flex-col md:flex-row justify-around items-center w-full mt-4">
-                <Link href="/contactus">
+                <Link href="/contact">
                   <a className="animated-link hover:border-blue-200 text-md md:text-xl text-blue-500 hover:text-blue-200">
                     Discuss a project
                   </a>
                 </Link>
-                <Link href="/contactus">
+                <Link href="/contact">
                   <a className="animated-link hover:border-blue-200 text-md md:text-xl text-blue-500 hover:text-blue-200">
                     Get hired
                   </a>
