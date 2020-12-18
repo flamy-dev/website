@@ -13,10 +13,10 @@ export default class CustomDocument extends Document {
             src="https://www.googletagmanager.com/gtag/js?id=UA-185675449-1"
           ></script>
           <script>
-            window.dataLayer = window.dataLayer || [];
-            {/* @ts-ignore */}
-            function gtag(){window.dataLayer.push(arguments)}
-            gtag('js', new Date()); gtag('config', 'UA-185675449-1');
+            {`window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments)}
+gtag('js', new Date()); gtag('config', 'UA-185675449-1');
+`}
           </script>
         </Head>
         <body className="dark ">
