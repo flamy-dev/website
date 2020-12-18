@@ -10,12 +10,14 @@ export default class CustomDocument extends Document {
           <link href="/fonts/style.css" rel="stylesheet" />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-185675449-1"
+            src="https://www.googletagmanager.com/gtag/js?id=G-SLEM7DLJMV"
           ></script>
           <script>
-            {`window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments)}
-gtag('js', new Date()); gtag('config', 'UA-185675449-1');
+            {`  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SLEM7DLJMV');
 `}
           </script>
         </Head>
