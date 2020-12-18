@@ -5,6 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Input from "../Input/Input";
+import Label from "../Label/Label";
+import Button from "../Button/Button";
 
 const formName = "hiring";
 
@@ -62,7 +65,6 @@ const HiringForm = (props) => {
             file: Yup.mixed()
               .required("CV Required")
               .test("fileSize", "File too large", (value) => {
-                console.log("value", value);
                 return value && value.size <= fileSize;
               })
               .test(
@@ -96,140 +98,98 @@ const HiringForm = (props) => {
             >
               <div className="flex justify-between gap-3">
                 <span className="w-1/2">
-                  <label
-                    htmlFor="firstName"
-                    className="block text-xs font-bold text-gray-800 uppercase"
-                  >
-                    Firstname
-                  </label>
-                  <input
+                  <Label htmlFor="firstName">Firstname</Label>
+                  <Input
                     id="firstName"
                     type="text"
                     name="firstName"
                     placeholder="John"
-                    className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                      ${
-                        formik.touched.firstName && formik.errors.firstName
-                          ? "border-red-400"
-                          : formik.touched.firstName
-                          ? "border-green-400"
-                          : ""
-                      }
-                    `}
+                    extraClass={
+                      formik.touched.firstName && formik.errors.firstName
+                        ? "border-red-400"
+                        : formik.touched.firstName
+                        ? "border-green-400"
+                        : ""
+                    }
                     {...formik.getFieldProps("firstName")}
                   />
                 </span>
                 <span className="w-1/2">
-                  <label
-                    htmlFor="lastName"
-                    className="block text-xs font-semibold text-gray-800 uppercase"
-                  >
-                    Lastname
-                  </label>
-                  <input
+                  <Label htmlFor="lastName">Lastname</Label>
+                  <Input
                     id="lastName"
                     type="text"
                     name="lastName"
                     placeholder="Doe"
-                    className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none border-2 focus:bg-gray-300 focus:shadow-inner
-                    ${
+                    extraClass={
                       formik.touched.lastName && formik.errors.lastName
                         ? "border-red-400"
                         : formik.touched.lastName
                         ? "border-green-400"
                         : ""
                     }
-                    `}
                     {...formik.getFieldProps("lastName")}
                   />
                 </span>
               </div>
-              <label
-                htmlFor="email"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                E-mail
-              </label>
-              <input
+              <Label htmlFor="email">E-mail</Label>
+              <Input
                 id="email"
                 type="email"
                 name="email"
                 placeholder="john.doe@company.com"
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
+                extraClass={
                   formik.touched.email && formik.errors.email
                     ? "border-red-400"
                     : formik.touched.email
                     ? "border-green-400"
                     : ""
                 }
-                `}
                 {...formik.getFieldProps("email")}
               />
-              <label
-                htmlFor="contact"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                Contact Number
-              </label>
-              <input
+              <Label htmlFor="contact">Contact Number</Label>
+              <Input
                 id="contact"
                 type="tel"
                 name="contact"
                 placeholder="900-490-2389"
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
+                extraClass={
                   formik.touched.contact && formik.errors.contact
                     ? "border-red-400"
                     : formik.touched.contact
                     ? "border-green-400"
                     : ""
                 }
-                `}
                 {...formik.getFieldProps("contact")}
               />
-              <label
-                htmlFor="github"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                Github Url
-              </label>
-              <input
+              <Label htmlFor="github">Github Url</Label>
+              <Input
                 id="github"
                 type="text"
                 name="github"
                 placeholder="https://github.com/flamy-dev"
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
+                extraClass={
                   formik.touched.github && formik.errors.github
                     ? "border-red-400"
                     : formik.touched.github
                     ? "border-green-400"
                     : ""
                 }
-                `}
                 {...formik.getFieldProps("github")}
               />
-              <label
-                htmlFor="linkedin"
-                className="block mt-2 text-xs font-semibold text-gray-800 uppercase"
-              >
-                Linkedin Url
-              </label>
-              <input
+              <Label htmlFor="linkedin">Linkedin Url</Label>
+              <Input
                 id="linkedin"
                 type="text"
                 name="linkedin"
                 placeholder="https://www.linkedin.com/company/flamy-dev/"
-                className={`block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 border-2 focus:shadow-inner
-                ${
+                extraClass={
                   formik.touched.linkedin && formik.errors.linkedin
                     ? "border-red-400"
                     : formik.touched.linkedin
                     ? "border-green-400"
                     : ""
                 }
-                `}
                 {...formik.getFieldProps("linkedin")}
               />
               <input type="hidden" name="form-name" value={formName} />
@@ -267,12 +227,7 @@ const HiringForm = (props) => {
                   />
                 </span>
                 <span className="w-1/2">
-                  <button
-                    type="submit"
-                    className="h-full w-full mt-6 font-medium tracking-widest uppercase text-blue-600 hover:text-blue-800 border-gray-100 border-2 hover:border-blue-500 focus:outline-none"
-                  >
-                    Submit
-                  </button>
+                  <Button type="submit">Submit</Button>
                 </span>
               </div>
               <div className="mt-6">
