@@ -22,7 +22,6 @@ const HiringForm = (props) => {
   const fileSize = 1024 * 1024 * 10; //10mb
 
   const ErrorComponent = (props) => {
-    console.log(props);
     return (
       <div className="pt-4 text-red-700 text-base flex justify-start items-center h-2 w-full pl-2">
         {props.children}
