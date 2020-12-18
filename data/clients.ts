@@ -1,187 +1,205 @@
-export default [
+const data: {
+  logo: string;
+  name: string;
+  link: string;
+  needBg?: boolean;
+  row?: number;
+  col?: number;
+  projects: {
+    link: string;
+    name: string;
+    tags: string[];
+    description: string;
+    screenshots: {
+      path: string;
+      caption: string;
+    }[];
+  }[];
+}[] = [
   {
-    logoPath: "./travelbank-logo.png",
-    link: "https://travelbank.com/",
+    logo: "./travelbank-logo.png",
     name: "Travel Bank",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
+    link: "https://travelbank.com",
+    projects: [
       {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
+        link: "https://slack.com/apps/A01EHHDD29F-travelbank",
+        name: "Travelbank's Slackapp",
+        tags: ["slack", "app", "typescript", "boltjs", "react"],
+        description: `Travelbank's slack app allows users to directly contact Travelbank support over slack DMs making support more seamless and creating good experience for users. 
+    
+The slack app was developed in typescript using the [bolt](https://slack.dev/bolt-js/) framework by slack.`,
+        screenshots: [
+          {
+            path: "/static/projects/tb1.png",
+            caption: "Slack interaction",
+          },
+          {
+            path: "/static/projects/tb2.png",
+            caption: "Add to slack button",
+          },
+        ],
       },
     ],
   },
   {
-    logoPath: "./TechChange-logo.png",
+    logo: "./TechChange-logo.png",
     link: "https://www.techchange.org/",
     name: "Tech Change",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
+    projects: [
       {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
+        link: "https://www.techchange.org/",
+        name: "Calculators",
+        tags: [
+          "techchange",
+          "calculator",
+          "ant-design",
+          "react",
+          "typescript",
+          "spreadsheets",
+        ],
+        description:
+          "A number of calculators were created that were embedded on techchange's website. These were developed with react and ant.design react component library.",
+        screenshots: [
+          {
+            path: "/static/projects/tc1.png",
+            caption: "Costing Output",
+          },
+          {
+            path: "/static/projects/tc2.png",
+            caption: "Productivity Costing",
+          },
+          {
+            path: "/static/projects/tc3.png",
+            caption: "ROI Calculator",
+          },
+          {
+            path: "/static/projects/tc4.png",
+            caption: "Benefit per life saved",
+          },
+          {
+            path: "/static/projects/tc5.png",
+            caption: "Employment Calculation",
+          },
+          {
+            path: "/static/projects/tc6.png",
+            caption: "Insurance Calculation",
+          },
+          {
+            path: "/static/projects/tc7.png",
+            caption: "Malaria outpatient calculation 1",
+          },
+          {
+            path: "/static/projects/tc8.png",
+            caption: "Malaria inpatient calculation 2",
+          },
+          {
+            path: "/static/projects/tc9.png",
+            caption: "Malaria inpatient calculation 1",
+          },
+          {
+            path: "/static/projects/tc10.png",
+            caption: "Malaria outpatient calculation 2",
+          },
+        ],
       },
     ],
   },
   {
-    logoPath: "./byte-logo.png",
+    logo: "./byte-logo.png",
     link: "https://getbyte.app/",
     name: "Byte",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
+    projects: [
       {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
+        link: "https://getbyte.app/",
+        name: "Byte backend scaling and refactoring",
+        tags: [
+          "typescript",
+          "express",
+          "nodejs",
+          "mongodb",
+          "influxdb",
+          "refactor",
+        ],
+        description: `
+- Refactored all the backend code from node.js to typescript inheriting all typescript benefits to the codebase.
+- Broken down the backend system into fetcher, websocket, alert, and backend components. Each of which can be scaled individually for selected backends.`,
+        screenshots: [],
       },
     ],
   },
   {
-    logoPath: "./refactoring-guru-logo.png",
+    logo: "./refactoring-guru-logo.png",
     link: "https://refactoring.guru/",
     name: "Refactoring Guru",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
+    projects: [
       {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
+        name: "Refactoring Guru Python Implementation Example",
+        tags: ["refactoring", "guru"],
+        link:
+          "https://github.com/RefactoringGuru/design-patterns-python/commit/0b6336668e37e1ad8117ab20d18b9efa66c55200",
+        description:
+          "Reference implementation for the Prototype design pattern for 'Dive into design patterns' ebook",
+        screenshots: [],
       },
     ],
   },
   {
-    logoPath: "./bklyn-logo.png",
+    logo: "./bklyn-logo.png",
     link: "https://bklyn.co/",
     name: "Bklyn",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./lambda-collective-logo.png",
+    logo: "./lambda-collective-logo.png",
     link: "https://lambdacollective.com/",
     name: "Lambda Collective",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./fpc-logo.png",
+    logo: "./fpc-logo.png",
     link: "https://www.fusionpointcapital.com/",
     name: "Fusion Point Capital",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./indianrails-logo.png",
+    logo: "./indianrails-logo.png",
     link: "https://www.indianrails.in/",
     name: "Indian Rails",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./grammarbot-logo.png",
+    logo: "./grammarbot-logo.png",
     link: "https://www.grammarbot.io/",
     name: "Grammar Bot",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./danky-logo.png",
+    logo: "./danky-logo.png",
     link: "https://www.danky.co.uk/",
     name: "Danky",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./hypo-advisors-logo.png",
+    logo: "./hypo-advisors-logo.png",
     link: "https://www.hypo-advisors.ch/",
     needBg: true,
     name: "Hypo Advisors",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./digitika-logo.png",
+    logo: "./digitika-logo.png",
     link: "https://www.digitika.co.ke",
     needBg: true,
     name: "Digitika",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
   {
-    logoPath: "./hublemania-logo.png",
+    logo: "./hublemania-logo.png",
     link: "https://www.hublemania.ch/",
     needBg: true,
     name: "Huble Mania",
-    projectName: "Travel Bank Dashboard",
-    tags: "#travel #bank",
-    description: "lorem ipsum",
-    details: [
-      {
-        scPath: "/adidas.png",
-        scDescription: "lorem ipsum bfgssssssssssssssssssssssf",
-      },
-    ],
+    projects: [],
   },
 ];
+
+export default data;
