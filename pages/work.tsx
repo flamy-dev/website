@@ -6,15 +6,6 @@ import WorkDetail from "../components/WorkDetail/WorkDetail";
 import "rodal/lib/rodal.css";
 import LazyImg from "../components/LazyImg";
 
-interface Client {
-  logoPath: string;
-  link: string;
-  row?: number;
-  col?: number;
-  needBg?: boolean;
-  name: string;
-}
-
 const Work = () => {
   const [details, setDetails] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -31,29 +22,33 @@ const Work = () => {
             Our <span className="font-extrabold">Work</span>
           </h1>
           <div className="containerN p-10">
-            {clients.map((client: Client) => (
-              <div
-                key={client.logoPath}
-                className={`group box cursor-pointer bg-opacity-40 ${
-                  client.row ? `row-span-${client.row}` : ""
-                } ${client.col ? `col-span-${client.col}` : ""}`}
-                onClick={() => {
-                  setDetails(<WorkDetail details={client} />);
-                  setIsVisible(true);
-                }}
-              >
-                <div className="content">
-                  <LazyImg
-                    src={client.logoPath}
-                    alt={client.name}
-                    className={`md:w-80 ${
-                      client.needBg ? "group-hover:bg-white p-2" : ""
-                    }`}
-                  />
-                  {/* <h3>Brand Name</h3> */}
+            {clients.map((client) =>
+              client.projects.map((project) => (
+                <div
+                  key={client.logo}
+                  className={`group box cursor-pointer bg-opacity-40 ${
+                    client.row ? `row-span-${client.row}` : ""
+                  } ${client.col ? `col-span-${client.col}` : ""}`}
+                  onClick={() => {
+                    setDetails(
+                      <WorkDetail client={client} project={project} />
+                    );
+                    setIsVisible(true);
+                  }}
+                >
+                  <div className="content">
+                    <LazyImg
+                      src={client.logo}
+                      alt={client.name}
+                      className={`md:w-80 ${
+                        client.needBg ? "group-hover:bg-white p-2" : ""
+                      }`}
+                    />
+                    {/* <h3>Brand Name</h3> */}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
 
@@ -67,7 +62,7 @@ const Work = () => {
           width="100vw"
           height="vh"
           customStyles={{ backgroundColor: "transparent" }}
-          closeOnEsc={true}
+          closeOnEsc={false}
         >
           {details}
         </Rodal>

@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import { ReactSVG } from "react-svg";
-import 'lazysizes';
+import "lazysizes";
+import "react-image-lightbox/style.css";
 
 const MyApp = ({ Component, pageProps }) => {
   const [isLoaded, setIsLoaded] = useState(false);
