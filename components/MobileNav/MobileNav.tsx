@@ -5,6 +5,7 @@ import {
   faPhoneSquareAlt,
   faCode,
   faGlobe,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import LazyImg from "../LazyImg";
 
@@ -39,21 +40,7 @@ const MobileNav = (props) => {
                     setMobileMenu(!mobileMenu);
                   }}
                 >
-                  {/* <!-- Heroicon name: x --> */}
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
+                  <FontAwesomeIcon icon={faTimes} size="lg" />
                 </button>
               </div>
             </div>
@@ -70,7 +57,6 @@ const MobileNav = (props) => {
 
                       <div className="text-md leading-6 font-medium text-gray-100 group-hover:text-white">
                         {navLink.text}
-                        {console.log(navLink.text)}
                       </div>
                     </a>
                   </Link>
