@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
+const GA_TRACKING_ID = "G-SLEM7DLJMV";
 export default class CustomDocument extends Document {
   render() {
     return (
@@ -10,16 +11,20 @@ export default class CustomDocument extends Document {
           <link href="/fonts/style.css" rel="stylesheet" />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-SLEM7DLJMV"
-          ></script>
-          <script>
-            {`  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SLEM7DLJMV');
-`}
-          </script>
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body className="dark ">
           <Main />
