@@ -99,7 +99,7 @@ const WorkDetail = (props) => {
             <hr className=" md:hidden border-1 border-white w-20 m-2"></hr>
           </div>
         </div>
-        {project.screenshots.length && (
+        {project.screenshots.length > 0 && (
           <ImagesSection images={project.screenshots} />
         )}
       </div>
