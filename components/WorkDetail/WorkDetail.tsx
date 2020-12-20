@@ -10,7 +10,7 @@ const ImagesSection = (props) => {
 
   return (
     <>
-      <div className="overflow-y-scroll flex flex-col m-1 justify-center items-center p-2 md:py-10 flex-grow md:content-start md:w-1/3 text-center md:text-center w-full md:h-screen">
+      <div className="overflow-y-scroll flex flex-col m-1 justify-center items-center p-2 md:my-10 flex-grow md:content-start w-full md:w-1/3 text-center md:text-center md:h-screen">
         {images.map(({ path }, idx) => (
           <div
             key={path}
@@ -18,7 +18,7 @@ const ImagesSection = (props) => {
           >
             <LazyImg
               src={path}
-              className="w-40 md:w-3/5 lg:w-80 cursor-pointer"
+              className="w-full cursor-pointer"
               alt={path + " screenshot" + idx}
               onClick={() => {
                 setIsLightBoxOpen(true);
@@ -28,7 +28,7 @@ const ImagesSection = (props) => {
           </div>
         ))}
       </div>
-      );
+      {/* ); */}
       {isLightBoxOpen && (
         <Lightbox
           mainSrc={images[index].path}
@@ -74,7 +74,7 @@ const WorkDetail = (props) => {
           <div className="mt-8 text-3xl font-extrabold text-center">
             {project.name}
           </div>
-          <div className="my-2 text-gray-200">
+          <div className="my-2 text-gray-200 text-center">
             {project.tags.map((tag) => `#${tag}`).join(" ")}
           </div>
 
@@ -88,14 +88,20 @@ const WorkDetail = (props) => {
             Visit
           </a>
         </div>
-        <div className="flex flex-col justify-center items-center p-2 w-full md:w-1/3  m-1 work-description">
+        <div
+          className={`flex flex-col justify-center items-center p-2 w-full m-1 work-description
+          ${project.screenshots.length ? "md:w-1/3" : ""}
+        `}
+        >
           <h3 className="font-extrabold text-xl">Description</h3>
-          <div className="flex justify-center items-center flex-col pt-4 text-center text-gray-200">
+          <div className="flex justify-center items-center flex-col pt-4 text-center text-gray-200 description">
             <ReactMarkdown>{project.description}</ReactMarkdown>
-            <hr className=" md:hidden border-1 border-white w-full m-2"></hr>
+            <hr className=" md:hidden border-1 border-white w-20 m-2"></hr>
           </div>
         </div>
-        <ImagesSection images={project.screenshots} />
+        {project.screenshots.length && (
+          <ImagesSection images={project.screenshots} />
+        )}
       </div>
     </div>
   );
