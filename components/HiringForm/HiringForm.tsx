@@ -81,9 +81,8 @@ const HiringForm = (props) => {
               body: new URLSearchParams(data).toString(),
             })
               .then(() => toast.success("Form successfully submitted."))
-              .catch((error) => {
+              .catch(() => {
                 toast.error("An error occured. Please try again.");
-                console.log(error);
               });
           }}
         >
