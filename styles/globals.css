@@ -131,6 +131,27 @@ a {
   width: 10%;
 }
 
+.description a {
+  @apply text-blue-500;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.description a:hover {
+  @apply text-blue-300;
+}
+
+.description a::after {
+  content: "";
+  width: 100%;
+  transition: width 0.3s;
+  @apply block h-1 bg-blue-900;
+}
+
+.description a:hover::after {
+  width: 10%;
+}
+
 /* clients section  */
 @media only screen and (min-width: 1000px) {
   .grayscale {
