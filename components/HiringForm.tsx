@@ -76,9 +76,8 @@ const HiringForm = (props) => {
             const data = new FormData(formRef.current);
             fetch("/", {
               method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
               // @ts-ignore
-              body: new URLSearchParams(data).toString(),
+              body: data,
             })
               .then(() => toast.success("Form successfully submitted."))
               .catch(() => {
