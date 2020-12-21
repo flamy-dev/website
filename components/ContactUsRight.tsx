@@ -1,4 +1,4 @@
-import HiringForm from "../HiringForm/HiringForm";
+import HiringForm from "./HiringForm";
 
 const ContactUsRight = (props) => {
   const { isActive } = props;

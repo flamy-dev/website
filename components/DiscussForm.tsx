@@ -3,9 +3,9 @@ import { useRef } from "react";
 import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Input from "../Input/Input";
-import Label from "../Label/Label";
-import Button from "../Button/Button";
+import Input from "./Input";
+import Label from "./Label";
+import Button from "./Button";
 
 const formName = "discuss-clients";
 

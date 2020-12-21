@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import StyledNavLink from "../StyledNavLink/StyledNavLink";
-import MobileNav from "../MobileNav/MobileNav";
-import LazyImg from "../LazyImg";
+import StyledNavLink from "./StyledNavLink";
+import MobileNav from "./MobileNav";
+import LazyImg from "./LazyImg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 

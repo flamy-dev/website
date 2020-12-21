@@ -1,9 +1,9 @@
 import { useState } from "react";
-import ContactUsLeft from "../components/ContactUsLeft/ContactUsLeft";
-import ContactUsRight from "../components/ContactUsRight/ContactUsRight";
+import ContactUsLeft from "../components/ContactUsLeft";
+import ContactUsRight from "../components/ContactUsRight";
 import { contactus } from "../data/contactus";
-import FullPageDiv from "../components/FullPageDiv/FullPageDiv";
-import Page from "../components/Page/Page";
+import FullPageDiv from "../components/FullPageDiv";
+import Page from "../components/Page";
 
 const ContactUs = (props) => {
   const { active } = props;

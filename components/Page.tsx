@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import ContactButton from "../ContactButton/ContactButton";
-import NavBar from "../Navbar/Navbar";
+import ContactButton from "./ContactButton";
+import NavBar from "./Navbar";
 
 const Page = (props) => {
   const { title, children, description, currentURL } = props;

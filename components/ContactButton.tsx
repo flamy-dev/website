@@ -1,4 +1,4 @@
-import LazyImg from "../LazyImg";
+import LazyImg from "./LazyImg";
 
 const ContactButton = (props) => {
   const { children, setShowModal } = props;

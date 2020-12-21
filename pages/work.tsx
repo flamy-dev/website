@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Page from "../components/Page/Page";
+import Page from "../components/Page";
 import clients from "../data/clients";
 import Rodal from "rodal";
-import WorkDetail from "../components/WorkDetail/WorkDetail";
+import WorkDetail from "../components/WorkDetail";
 import "rodal/lib/rodal.css";
 import LazyImg from "../components/LazyImg";
 

@@ -1,4 +1,4 @@
-import LazyImg from "../LazyImg";
+import LazyImg from "./LazyImg";
 
 const AboutFlamyElement = (props) => {
   const { logo, description } = props;

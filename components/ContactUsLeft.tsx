@@ -1,4 +1,4 @@
-import ContactDetails from "../ContactDetails/ContactDetails";
+import ContactDetails from "./ContactDetails";
 
 const ContactUsLeft = (props) => {
   const { isActive, contactus } = props;

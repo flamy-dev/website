@@ -1,5 +1,5 @@
-import ContactButton from "../ContactButton/ContactButton";
-import Tagline from "../Tagline/Tagline";
+import ContactButton from "./ContactButton";
+import Tagline from "./Tagline";
 import Link from "next/link";
 
 const Welcome = (props) => {

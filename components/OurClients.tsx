@@ -1,5 +1,5 @@
 import _ from "lodash";
-import LazyImg from "../LazyImg";
+import LazyImg from "./LazyImg";
 
 const OurClients = (props) => {
   const { clients } = props;

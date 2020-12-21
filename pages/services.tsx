@@ -1,8 +1,8 @@
 import React from "react";
-import CarouselElement from "../components/CarouselElement/CarouselElement";
-import Page from "../components/Page/Page";
+import CarouselElement from "../components/CarouselElement";
+import Page from "../components/Page";
 import ReactFullPage from "@fullpage/react-fullpage";
-import Headings from "../components/Headings/Headings";
+import Headings from "../components/Headings";
 import { services } from "../data/services";
 import MediaQuery from "react-responsive";
 

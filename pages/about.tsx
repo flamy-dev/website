@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import FullPageDiv from "../components/FullPageDiv/FullPageDiv";
-import Page from "../components/Page/Page";
+import FullPageDiv from "../components/FullPageDiv";
+import Page from "../components/Page";
 import constants from "../data/about";
-import CarouselElement from "../components/CarouselElement/CarouselElement";
-import OurClients from "../components/OurClients/OurClients";
-import Welcome from "../components/Welcome/Welcome";
+import CarouselElement from "../components/CarouselElement";
+import OurClients from "../components/OurClients";
+import Welcome from "../components/Welcome";
 import ReactFullPage from "@fullpage/react-fullpage";
 import strings from "../data/about";
 import clients from "../data/clients";
 import MediaQuery from "react-responsive";
-import AboutFlamyElement from "../components/AboutFlamyElement/AboutFlamyElement";
-import AboutCarousel from "../components/AboutCarousel/AboutCarousel";
+import AboutFlamyElement from "../components/AboutFlamyElement";
+import AboutCarousel from "../components/AboutCarousel";
 import LazyImg from "../components/LazyImg";
 
 const About = (props) => {

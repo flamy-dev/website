@@ -1,4 +1,4 @@
-import CarouselElement from "../CarouselElement/CarouselElement";
+import CarouselElement from "./CarouselElement";
 
 const AboutCarousel = (props) => {
   const { strings, parentClass = "", slideClass = "" } = props;

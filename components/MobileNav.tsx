@@ -7,7 +7,7 @@ import {
   faGlobe,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import LazyImg from "../LazyImg";
+import LazyImg from "./LazyImg";
 
 const MobileNav = (props) => {
   const { mobileMenu, setMobileMenu } = props;

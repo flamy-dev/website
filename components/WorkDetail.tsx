@@ -1,4 +1,4 @@
-import LazyImg from "../LazyImg";
+import LazyImg from "./LazyImg";
 import ReactMarkdown from "react-markdown";
 import Lightbox from "react-image-lightbox";
 import { useState } from "react";

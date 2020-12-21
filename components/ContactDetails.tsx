@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import DiscussForm from "../DiscussForm/DiscussForm";
+import DiscussForm from "./DiscussForm";
 
 const ContactDetails = (props) => {
   const { contactus, isLeftDivActive } = props;
