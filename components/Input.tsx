@@ -1,4 +1,4 @@
-const Input = ({ id, name, type, placeholder, extraClass, ...rest }) => {
+const Input = ({ id, type, placeholder, extraClass, ...rest }) => {
   return (
     <input
       type={type}
