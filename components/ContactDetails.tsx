@@ -16,6 +16,8 @@ const ContactDetails = (props) => {
               href={contact.url}
               className="text-black hover:text-blue-800"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label={contact.name}
             >
               <FontAwesomeIcon icon={contact.icon} size="lg" />
             </a>
