@@ -2,7 +2,7 @@ import { Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Input from "./Input";
@@ -20,6 +20,7 @@ const HiringForm = (props) => {
   const supportedFormats = ["application/pdf"];
 
   const fileSize = 1024 * 1024 * 10; //10mb
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const ErrorComponent = (props) => {
     return (
@@ -74,6 +75,7 @@ const HiringForm = (props) => {
           })}
           onSubmit={() => {
             const data = new FormData(formRef.current);
+            setIsProcessing(true)
             fetch("/", {
               method: "POST",
               // @ts-ignore
@@ -82,7 +84,8 @@ const HiringForm = (props) => {
               .then(() => toast.success("Form successfully submitted."))
               .catch(() => {
                 toast.error("An error occured. Please try again.");
-              });
+              })
+              .finally(() => setIsProcessing(false));
           }}
         >
           {(formik) => (
@@ -224,7 +227,8 @@ const HiringForm = (props) => {
                   />
                 </span>
                 <span className="w-1/2">
-                  <Button type="submit">Submit</Button>
+                  {/* @ts-ignore */}
+                  <Button type="submit" disabled={isProcessing}>{isProcessing ? "processing..." : "Submit"}</Button>
                 </span>
               </div>
               <div className="mt-6">
