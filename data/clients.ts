@@ -26,7 +26,7 @@ const data: {
         name: "Travelbank's Slackapp",
         tags: ["slack", "app", "typescript", "boltjs", "react"],
         description: `Travelbank's slack app allows users to directly contact Travelbank support over slack DMs making support more seamless and creating good experience for users. 
-    
+
 The slack app was developed in typescript using the [bolt](https://slack.dev/bolt-js/) framework by slack.`,
         screenshots: [
           {
@@ -58,7 +58,24 @@ The slack app was developed in typescript using the [bolt](https://slack.dev/bol
           "spreadsheets",
         ],
         description:
-          "A number of calculators were created that were embedded on techchange's website. These were developed with react and ant.design react component library.",
+          `A number of components were created that were embedded on 
+techchange's community health courses adding to the interactive experience.
+
+They are being used on the following courses:
+
+- [Financing Community Health Programs for Scale and Sustainability [Self-paced]](https://communityhealthacademy.course.tc/catalog?type=financing-community-health-programs-for-scale-and-sustainability-course-series)
+- [Financing Community Health Programs for Scale and Sustainability [Guided Journey]](https://communityhealthacademy.course.tc/catalog?type=financing-community-health-programs-for-scale-and-sustainability-course-series-guided-journey)
+
+Specifically, the components are being used in both journey's course 4, "Making 
+the Case". This course explores how and why we make the case for 
+investing in community health systems. Making the case is defined as using 
+convincing arguments to persuade someone that investing in community health 
+is important. Strong reasoning and evidence are essential in convincing 
+funders to invest. Tailoring arguments to your specific context can provide 
+an even more convincing case to obtain financing. 
+
+These excel-like components were developed with react and ant.design react
+component library.`,
         screenshots: [
           {
             path: "/static/projects/tc1.png",
