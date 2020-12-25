@@ -1,10 +1,10 @@
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faTwitter,
-  faFacebook,
+  // faFacebook,
   faLinkedin,
   faGithub,
-  faBehance,
+  // faBehance,
 } from "@fortawesome/free-brands-svg-icons";
 
 export const contactus = [
@@ -26,12 +26,12 @@ export const contactus = [
     value: "flamy_dev",
     url: "https://twitter.com/flamy_dev",
   },
-  {
-    name: "facebook icon",
-    icon: faFacebook,
-    value: "flamy.dev",
-    url: "https://www.facebook.com/flamy.dev",
-  },
+  // {
+  //   name: "facebook icon",
+  //   icon: faFacebook,
+  //   value: "flamy.dev",
+  //   url: "https://www.facebook.com/flamy.dev",
+  // },
   {
     name: "linkedin icon",
     icon: faLinkedin,
@@ -44,10 +44,10 @@ export const contactus = [
     value: "flamy-dev",
     url: "https://github.com/flamy-dev",
   },
-  {
-    name: "behance icon",
-    icon: faBehance,
-    value: "flamy-dev",
-    url: "https://www.behance.net/flamy-dev",
-  },
+  // {
+  //   name: "behance icon",
+  //   icon: faBehance,
+  //   value: "flamy-dev",
+  //   url: "https://www.behance.net/flamy-dev",
+  // },
 ];
