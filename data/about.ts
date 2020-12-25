@@ -11,7 +11,7 @@ const strings = {
       path: "/il3.svg",
       heading: "What we do?",
       description:
-        "We design software , mobile and web solutions to cater to your buisness needs.",
+        "We design software, mobile and web solutions to cater to your buisness needs.",
     },
     {
       path: "/il1.svg",
