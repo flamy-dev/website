@@ -400,6 +400,10 @@ a {
   list-style-type: disc;
 }
 
+.work-description p {
+  @apply my-2 w-full;
+}
+
 @media only screen and (max-width: 990px) {
   .wrapper svg {
     width: 200px;

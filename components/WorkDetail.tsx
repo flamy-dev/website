@@ -94,7 +94,7 @@ const WorkDetail = (props) => {
         `}
         >
           <h3 className="font-extrabold text-xl">Description</h3>
-          <div className="flex justify-center items-center flex-col pt-4 text-center text-gray-200 description">
+          <div className="flex justify-center items-center flex-col pt-4 text-gray-200 description">
             <ReactMarkdown>{project.description}</ReactMarkdown>
             <hr className=" md:hidden border-1 border-white w-20 m-2"></hr>
           </div>
