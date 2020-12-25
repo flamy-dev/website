@@ -173,7 +173,24 @@ component library.`,
     logo: "./bklyn-logo.png",
     link: "https://bklyn.co/",
     name: "Bklyn",
-    projects: [],
+    projects: [
+      {
+        link: "https://bklyn.co",
+        name: "On-demand designer slack app",
+        tags: ["slack", "app", "javascript", "mongodb", "heroku"],
+        description: `Slack app that any company can add to their workspace 
+needing a designer. The desinger is just one command away \`/new designer\`. On
+receiving this command the slack app creates a channel for that particular customer
+on the company(bklyn)'s slack and from there on all the conversation is bridged 
+between bklyn designer and the slack of client requiring designer.
+
+This way companies can find on-demand designers without ever leaving their slack
+workspace.
+
+The app was created using node, mongodb, and deployed on heroku.`,
+        screenshots: [],
+      },
+    ],
   },
   {
     logo: "./lambda-collective-logo.png",
@@ -185,32 +202,155 @@ component library.`,
     logo: "./fpc-logo.png",
     link: "https://www.fusionpointcapital.com/",
     name: "Fusion Point Capital",
-    projects: [],
+    projects: [
+      {
+        link: "https://www.fusionpointcapital.com",
+        name: "Stock screener, fundamentals, charts app",
+        tags: [
+          "react",
+          "material-ui",
+          "redux",
+          "python",
+          "asyncio",
+          "aiohttp",
+          "influxdb",
+          "finance",
+        ],
+        description: `Fusion point capial has its own set of filters / screeners 
+that are derived using propreitary and special technicals of [Arun Chopra](https://twitter.com/FusionptCapital).
+
+Stock historical data gathering and storing is done on influxdb for faster
+time series queries. The frontend uses react and redux for rendering and
+visualising all the data using charting library from [tradingview](https://github.com/tradingview/lightweight-charts).`,
+        screenshots: [
+          {
+            path: "/static/projects/fpc1.png",
+            caption: "Various different screeners",
+          },
+          {
+            path: "/static/projects/fpc2.png",
+            caption: "Screener with various sorting and filtering features",
+          },
+          {
+            path: "/static/projects/fpc3.png",
+            caption: "Detailed stock view with fundamentals and charts",
+          },
+        ],
+      },
+    ],
   },
   {
     logo: "./indianrails-logo.png",
     link: "https://www.indianrails.in/",
     name: "Indian Rails",
-    projects: [],
+    projects: [
+      {
+        link: "https://www.indianrails.in/",
+        name: "Backend feature for PNR status",
+        tags: [
+          "node",
+          "puppeteer",
+          "recaptcha",
+          "reverse-engineering",
+          "api",
+          "backend",
+        ],
+        description: `
+Developed backend api endpoint for checking PNR status of tickets. 
+
+There is no official API to get this data. Hence, it was required
+for us to reverse engineer the private API or scrape directly from
+the website. Also, this required for us to bypass recaptcha since
+the PNR webpage is behind recaptcha.
+
+We accomplished the same by browser instrumenation and careful OCR
+recognition to solve the captcha.`,
+        screenshots: [
+          { path: "/static/projects/ir1.png", caption: "IndianRails App" },
+        ],
+      },
+    ],
   },
   {
     logo: "./grammarbot-logo.png",
     link: "https://www.grammarbot.io/",
     name: "Grammar Bot",
-    projects: [],
+    projects: [
+      {
+        link: "https://github.com/GrammarBot-API/grammarbot-py",
+        name: "Grammar Bot python client library",
+        tags: ["grammarbot", "python", "library", "pypi"],
+        description: `
+Creating python client library for the grammarbot-api. The same can be found on
+[github](https://github.com/GrammarBot-API/grammarbot-py) and is also published
+on [PyPI](https://pypi.org/project/grammarbot/)`,
+        screenshots: [
+          {
+            path: "/static/projects/gb1.png",
+            caption: "GrammarBot python client library",
+          },
+        ],
+      },
+    ],
   },
   {
     logo: "./danky-logo.png",
     link: "https://www.danky.co.uk/",
     name: "Danky",
-    projects: [],
+    projects: [
+      {
+        link: "https://www.danky.co.uk",
+        name: "Resume management and automation",
+        tags: [
+          "resume-management",
+          "python",
+          "teamtailor",
+          "automation",
+          "cv-library",
+          "resume-library",
+        ],
+        description: `Danky helps warehouse job-seekers search and get warehouse
+jobs. In the process it requires some automation for getting all resumes on
+[teamtailor](https://teamtailor.com) and submitting the resumes to 
+[cv-library](https://cv-library.co.uk) and [resume-library](https://resume-library.com).
+
+The automation for the same was written using the APIs provided by teamtailor,
+cv-library and resume-library in python.`,
+        screenshots: [
+          {
+            caption: "Danky",
+            path: "/static/projects/danky1.png",
+          },
+        ],
+      },
+    ],
   },
   {
     logo: "./hypo-advisors-logo.png",
     link: "https://www.hypo-advisors.ch/",
     needBg: true,
     name: "Hypo Advisors",
-    projects: [],
+    projects: [
+      {
+        link: "https://www.hypo-advisors.ch/en/simulateur/",
+        name: "Borrowing Capacity Calculator",
+        tags: ["react", "material-ui", "calculator", "redux"],
+        description: `Hypo Advisors helps people get mortgages. The project was to
+create an interactive calculator for customers to check how much mortgage they can
+get, interest rates, etc. based on the buying price of property, earnings, bonuses,
+etc. It outputs a visualization along with information about buying capacity.`,
+        screenshots: [
+          {
+            caption: "Calculator Input",
+            path: "/static/projects/ha1.png",
+          },
+          {
+            caption: "Calculator Output",
+            path: "/static/projects/ha2.png",
+          },
+        ],
+      },
+    ],
   },
   {
     logo: "./digitika-logo.png",
@@ -224,7 +364,31 @@ component library.`,
     link: "https://www.hublemania.ch/",
     needBg: true,
     name: "Huble Mania",
-    projects: [],
+    projects: [
+      {
+        link: "https://www.hublemania.ch/placements/meteo-fonds-opp2/",
+        name: "Risk comparator tool",
+        tags: ["react", "material-ui"],
+        description: `Data visualization project that needed API development for
+wordpress that proxied to other API for getting data and returning the adapted
+response. 
+
+The frontend queried the API for getting the data and visualising the same.
+Visualization is an imposition of line and scatter chart with points being
+different icon depending on the data point. The chart also has interaction
+tools like zoom, pan, etc.`,
+        screenshots: [
+          {
+            caption: "Chart Visualization",
+            path: "/static/projects/hm1.png",
+          },
+          {
+            caption: "Table Visualization",
+            path: "/static/projects/hm2.png",
+          },
+        ],
+      },
+    ],
   },
 ];
 
