@@ -16,7 +16,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
@@ -26,18 +26,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(182, 25, 0);
-  background: linear-gradient(
-    49deg,
-    rgba(182, 25, 0, 1) 0%,
-    rgba(0, 63, 136, 1) 100%
-  );
+  background: rgba(63, 151, 255, 1);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(182, 25, 0);
-  background: linear-gradient(49deg, rgb(161, 23, 2) 0%, rgb(1, 56, 119) 100%);
+  background: rgba(63, 151, 255, 1);
 }
 
 /* general  */
@@ -228,11 +222,7 @@ a {
 
 .containerN .box:hover {
   background: rgb(182, 25, 0);
-  background: linear-gradient(
-    49deg,
-    rgba(182, 25, 0, 1) 0%,
-    rgba(0, 63, 136, 1) 100%
-  );
+  background: rgba(63, 151, 255, 0.5);
 }
 
 .containerN .box img {
