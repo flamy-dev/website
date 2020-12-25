@@ -57,8 +57,7 @@ The slack app was developed in typescript using the [bolt](https://slack.dev/bol
           "typescript",
           "spreadsheets",
         ],
-        description:
-          `A number of components were created that were embedded on 
+        description: `A number of components were created that were embedded on 
 techchange's community health courses adding to the interactive experience.
 
 They are being used on the following courses:
@@ -140,7 +139,12 @@ component library.`,
         description: `
 - Refactored all the backend code from node.js to typescript inheriting all typescript benefits to the codebase.
 - Broken down the backend system into fetcher, websocket, alert, and backend components. Each of which can be scaled individually for selected backends.`,
-        screenshots: [],
+        screenshots: [
+          {
+            path: "/static/projects/byte2.png",
+            caption: "Byte app screenshots",
+          },
+        ],
       },
     ],
   },
@@ -156,7 +160,12 @@ component library.`,
           "https://github.com/RefactoringGuru/design-patterns-python/commit/0b6336668e37e1ad8117ab20d18b9efa66c55200",
         description:
           "Reference implementation for the Prototype design pattern for 'Dive into design patterns' ebook",
-        screenshots: [],
+        screenshots: [
+          {
+            path: "/static/projects/rg1.png",
+            caption: "Refactoring Guru",
+          },
+        ],
       },
     ],
   },
