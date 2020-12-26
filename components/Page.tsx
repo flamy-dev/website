@@ -60,7 +60,11 @@ const Page = (props) => {
           />
         ))}
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" type="image/x-icon" href="/static/images/logo-square.svg" />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/static/images/logo-square.svg"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
           rel="preload"
