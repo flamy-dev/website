@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
-import { ReactSVG } from "react-svg";
 import "lazysizes";
 import "react-image-lightbox/style.css";
+import Loader from "../components/Loader";
 
 const MyApp = ({ Component, pageProps }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,15 +19,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
-      {isLoaded ? null : (
-        <div className="flex fixed h-screen w-screen justify-center items-center bg-black z-top">
-          <ReactSVG
-            src="./static/images/logo.svg"
-            renumerateIRIElements={false}
-            className="wrapper"
-          />
-        </div>
-      )}
+      {isLoaded ? null : <Loader />}
       <Component {...pageProps} />
     </>
   );
