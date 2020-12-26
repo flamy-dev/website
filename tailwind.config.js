@@ -13,14 +13,12 @@ module.exports = {
         helvetica: ["Helvetica", "sans-serif"],
       },
       backgroundImage: (theme) => ({
-        underline: "url('/underline.svg')",
-        whitetheme:
-          "linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/White_bg.jpg')",
+        underline: "url('/static/images/underline.svg')",
         darktheme:
-          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bg.webp')",
+          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/bg.webp')",
         about:
-          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/logo-f.svg'))",
-        chatbot: "url('/chatbot.svg')",
+          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/logo-f.svg'))",
+        chatbot: "url('/static/illustrations/chatbot.svg')",
         work:
           "linear-gradient(49deg,rgba(182, 25, 0, 1) 0%,rgba(0, 63, 136, 1) 100%)",
       }),

@@ -12,7 +12,7 @@ const ContactButton = (props) => {
         {children}
       </button>
       <div>
-        <LazyImg src="/btn.svg" alt="button" />
+        <LazyImg src="/static/illustrations/btn.svg" alt="button" />
       </div>
     </div>
   );

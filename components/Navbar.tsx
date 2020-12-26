@@ -22,7 +22,7 @@ const Navbar = (props) => {
       <div className="flex w-full items-center justify-between bg-black bg-opacity-80  px-4 py-6 text-white fixed z-50 right-0 left-0">
         <Link href="/">
           <a className="w-28 md:w-40">
-            <LazyImg src="/logo-text.svg" alt="Flamy Logo" />
+            <LazyImg src="/static/images/logo-text.svg" alt="Flamy Logo" />
           </a>
         </Link>
         <div className="hidden md:flex w-4/5 items-center justify-between ">

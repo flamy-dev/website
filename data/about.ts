@@ -8,13 +8,13 @@ const strings = {
   },
   carousel: [
     {
-      path: "/il3.svg",
+      path: "/static/illustrations/do_what.svg",
       heading: "What we do?",
       description:
         "We design software, mobile and web solutions to cater to your buisness needs.",
     },
     {
-      path: "/il1.svg",
+      path: "/static/illustrations/who_we.svg",
       heading: "Who are we?",
       description:
         "We are a highly determined team of experts that use cutting-edge technology to provide the best design and IT development solutions to our clients.",

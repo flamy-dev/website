@@ -17,7 +17,7 @@ const data: {
   }[];
 }[] = [
   {
-    logo: "./travelbank-logo.png",
+    logo: "/static/logos/travelbank.png",
     name: "Travel Bank",
     link: "https://travelbank.com",
     projects: [
@@ -42,7 +42,7 @@ The slack app was developed in typescript using the [bolt](https://slack.dev/bol
     ],
   },
   {
-    logo: "./TechChange-logo.png",
+    logo: "/static/logos/TechChange.png",
     link: "https://www.techchange.org/",
     name: "Tech Change",
     projects: [
@@ -121,7 +121,7 @@ component library.`,
     ],
   },
   {
-    logo: "./byte-logo.png",
+    logo: "/static/logos/byte.png",
     link: "https://getbyte.app/",
     name: "Byte",
     projects: [
@@ -149,7 +149,7 @@ component library.`,
     ],
   },
   {
-    logo: "./refactoring-guru-logo.png",
+    logo: "/static/logos/refactoring-guru.png",
     link: "https://refactoring.guru/",
     name: "Refactoring Guru",
     projects: [
@@ -170,7 +170,7 @@ component library.`,
     ],
   },
   {
-    logo: "./bklyn-logo.png",
+    logo: "/static/logos/bklyn.png",
     link: "https://bklyn.co/",
     name: "Bklyn",
     projects: [
@@ -193,13 +193,13 @@ The app was created using node, mongodb, and deployed on heroku.`,
     ],
   },
   {
-    logo: "./lambda-collective-logo.png",
+    logo: "/static/logos/lambda-collective.png",
     link: "https://lambdacollective.com/",
     name: "Lambda Collective",
     projects: [],
   },
   {
-    logo: "./fpc-logo.png",
+    logo: "/static/logos/fpc.png",
     link: "https://www.fusionpointcapital.com/",
     name: "Fusion Point Capital",
     projects: [
@@ -240,7 +240,7 @@ visualising all the data using charting library from [tradingview](https://githu
     ],
   },
   {
-    logo: "./indianrails-logo.png",
+    logo: "/static/logos/indianrails.png",
     link: "https://www.indianrails.in/",
     name: "Indian Rails",
     projects: [
@@ -272,7 +272,7 @@ recognition to solve the captcha.`,
     ],
   },
   {
-    logo: "./grammarbot-logo.png",
+    logo: "/static/logos/grammarbot.png",
     link: "https://www.grammarbot.io/",
     name: "Grammar Bot",
     projects: [
@@ -294,7 +294,7 @@ on [PyPI](https://pypi.org/project/grammarbot/)`,
     ],
   },
   {
-    logo: "./danky-logo.png",
+    logo: "/static/logos/danky.png",
     link: "https://www.danky.co.uk/",
     name: "Danky",
     projects: [
@@ -326,7 +326,7 @@ cv-library and resume-library in python.`,
     ],
   },
   {
-    logo: "./hypo-advisors-logo.png",
+    logo: "/static/logos/hypo-advisors.png",
     link: "https://www.hypo-advisors.ch/",
     needBg: true,
     name: "Hypo Advisors",
@@ -353,14 +353,14 @@ etc. It outputs a visualization along with information about buying capacity.`,
     ],
   },
   {
-    logo: "./digitika-logo.png",
+    logo: "/static/logos/digitika.png",
     link: "https://www.digitika.co.ke",
     needBg: true,
     name: "Digitika",
     projects: [],
   },
   {
-    logo: "./hublemania-logo.png",
+    logo: "/static/logos/hublemania.png",
     link: "https://www.hublemania.ch/",
     needBg: true,
     name: "Huble Mania",

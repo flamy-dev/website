@@ -28,7 +28,7 @@ const MobileNav = (props) => {
               <div>
                 <LazyImg
                   className="h-10 w-auto"
-                  src="/logo-text.svg"
+                  src="/static/images/logo-text.svg"
                   alt="flamy logo"
                 />
               </div>

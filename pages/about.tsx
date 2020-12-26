@@ -53,16 +53,16 @@ const About = (props) => {
                   <div className="text-gray-200 flex flex-row justify-between items-center w-full h-full text-center p-4 lg:px-20 text-sm md:text-lg lg:text-xl">
                     <AboutFlamyElement
                       description={constants.logo.f_meaning}
-                      logo="/logo-f.svg"
+                      logo="/static/images/logo-f.svg"
                     />
                     <LazyImg
-                      src="/logo.svg"
+                      src="/static/images/logo-f.svg"
                       className="hidden md:block h-auto w-4/12 lg:w-2/12 lg:px-10"
                       alt="Flamy Full Logo"
                     />
                     <AboutFlamyElement
                       description={constants.logo.phoenix_meaning}
-                      logo="/logo-phoenix.svg"
+                      logo="/static/images/logo-phoenix.svg"
                     />
                   </div>
                 </FullPageDiv>
@@ -73,7 +73,7 @@ const About = (props) => {
                 />
                 <FullPageDiv noPadding={true}>
                   <CarouselElement
-                    path="il2.svg"
+                    path="/static/illustrations/founder.svg"
                     description={constants.about.founder}
                     isRight={true}
                     heading={constants.about.heading}
@@ -101,13 +101,13 @@ const About = (props) => {
                 <div className="section text-center -mt-20">
                   <AboutFlamyElement
                     description={constants.logo.f_meaning}
-                    logo="/logo-f.svg"
+                    logo="/static/images/logo-f.svg"
                   />
                 </div>
                 <div className="section text-center -mt-20">
                   <AboutFlamyElement
                     description={constants.logo.phoenix_meaning}
-                    logo="/logo-phoenix.svg"
+                    logo="/static/images/logo-phoenix.svg"
                   />
                 </div>
                 <AboutCarousel
@@ -117,7 +117,7 @@ const About = (props) => {
                 />
                 <div className="section text-center ">
                   <CarouselElement
-                    path="il2.svg"
+                    path="/static/illustrations/founder.svg"
                     description={constants.about.founder}
                     heading={constants.about.heading}
                   />

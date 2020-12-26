@@ -99,7 +99,7 @@ a {
 
 #about-hero:before {
   content: "";
-  background-image: url("../public/logo-f.svg");
+  background-image: url("../public/static/images/logo-f.svg");
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;

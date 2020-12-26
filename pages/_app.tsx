@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps }) => {
       {isLoaded ? null : (
         <div className="flex fixed h-screen w-screen justify-center items-center bg-black z-top">
           <ReactSVG
-            src="./logo.svg"
+            src="./static/images/logo.svg"
             renumerateIRIElements={false}
             className="wrapper"
           />
