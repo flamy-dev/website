@@ -39,6 +39,7 @@ const About = (props) => {
           <ReactFullPage
             slidesNavigation={true}
             navigation={true}
+            licenseKey="U%a0foQ%r3"
             render={(_) => (
               <ReactFullPage.Wrapper>
                 <div

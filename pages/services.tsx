@@ -51,6 +51,7 @@ const Services = () => (
       <MediaQuery maxDeviceWidth={1000}>
         <ReactFullPage
           navigation={true}
+          licenseKey="U%a0foQ%r3"
           render={(_) => (
             <ReactFullPage.Wrapper>
               <Slides className="section" />
